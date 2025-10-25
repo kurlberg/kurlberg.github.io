@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2021-06-04 Fri 08:48 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Pär Kurlberg</title>
+<meta name="generator" content="Org mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2019 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Pär Kurlberg</h1>
+
+<div class="figure">
+<p><a href="pic/kurlberg.jpg"><img src="pic/kurlberg_thumb.jpg" alt="kurlberg_thumb.jpg" /></a>
+</p>
+</div>
+
+<p>
+I am a professor at the <a href="http://www.math.kth.se">department of mathematics</a> at <a href="http://www.kth.se">KTH</a>.  My main
+research interest is <a href="./research.html">Number Theory related to Quantum Chaos</a>.  Abridged
+<a href="web_vita.pdf">CV</a>.
+</p>
+
+
+
+<div id="outline-container-orgefdf552" class="outline-2">
+<h2 id="orgefdf552">Distinctions</h2>
+<div class="outline-text-2" id="text-orgefdf552">
+<ul class="org-ul">
+<li><a href="http://www.gustafssonsstiftelse.se/kva/index.html">Göran Gustafsson Prize</a>, 2010.</li>
+<li><a href="http://www.kva.se/sv/pressrum/pressmeddelanden-2008-2001/Sju-unga-forskare-far-toppjobb-av-akademien/">Royal Swedish Academy of Sciences Research Fellowship</a>, 2004-2009.</li>
+<li><a href="http://www.kva.se/sv/Priser/Ovriga-prisbeloningar/">Edlund Prize</a>, 2008.</li>
+<li>"Feather in the hat" teaching award, Spring 2007.</li>
+<li>Göran Gustafsson junior research award, 2005.</li>
+<li><a href="http://www.swe-math-soc.se/aktuellt/wallenbergpriset.html">Wallenberg Prize</a>, 2002.</li>
+</ul>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-orgacf45ec" class="outline-2">
+<h2 id="orgacf45ec">Research</h2>
+<div class="outline-text-2" id="text-orgacf45ec">
+
+<div class="figure">
+<p><a href="pic/torus_32045_64d_with_axis.png"><img src="pic/torus_32045_64d.png" alt="torus_32045_64d.png" /></a>
+</p>
+</div>
+
+
+<div class="figure">
+<p><a href="popular/popular.html"><img src="pic/scar2.jpg" alt="scar2.jpg" /></a>
+</p>
+</div>
+
+
+<ul class="org-ul">
+<li><a href="./publications.html">Publications</a></li>
+
+<li><a href="./postdocs.html">Postdocs</a></li>
+
+<li><a href="./students.html">Students</a></li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-org0bc4a86" class="outline-2">
+<h2 id="org0bc4a86">Teaching</h2>
+<div class="outline-text-2" id="text-org0bc4a86">
+<p>
+<a href="https://people.kth.se/~kurlberg/sf1633-ht20/">SF1633</a> &nbsp; (<a href="https://people.kth.se/~kurlberg/sf1633-ht19/">SF1633 ht19</a>) &nbsp;   &nbsp; &nbsp;  <a href="teaching.html">Old courses</a>.  &nbsp; &nbsp; &nbsp; Articles <a href="on-teaching.html">on teaching</a>.
+</p>
+</div>
+
+<div id="outline-container-orge5e12e5" class="outline-3">
+<h3 id="orge5e12e5">Why study math?</h3>
+<div class="outline-text-3" id="text-orge5e12e5">
+<ul class="org-ul">
+<li>You can do some deep <a href="http://parrt.cs.usfca.edu/doc/matrix-calculus.pdf">stuff</a>.</li>
+
+<li>According to the Economist, <a href="http://www.economist.com/blogs/freeexchange/2009/08/how_to_get_smart.cfm">TAKING more maths in school can make
+you richer</a>. In swedish: <a href="http://www.e24.se/karriar/karriar/matematikstudier-ger-30-procent-hogre-lon_710545.e24">Matematikstudier ger 30 procent högre lön</a>.</li>
+
+<li><a href="http://www.wired.com/autopia/2010/10/how-the-allies-used-math-against-german-tanks/">Fighting nazis</a> (<a href="http://www.svd.se/kulturnoje/nyheter/svensk-knackte-nazisternas-hemliga-koder_5549643.svd">another way</a>, in swedish.)</li>
+
+<li>To <a href="http://www.paulgraham.com/hs.html">stay upwind</a>. Paul Graham also has some 
+interesting <a href="http://www.paulgraham.com/articles.html">essays</a> on startups.</li>
+
+<li>Get rich: <a href="http:///www.rose-hulman.edu/~bryan/googleFinalVersionFixed.pdf">First way</a>. <a href="http://en.wikipedia.org/wiki/Financial_mathematics">Second way</a>.</li>
+
+<li>No pain, no gain: "The fact is, if you are thinking about a PhD program 
+in <i>economics</i>, you are advised to  
+<a href="http://gregmankiw.blogspot.com/2006/09/why-aspiring-economists-need-math.html">take math courses until it hurts.</a>"</li>
+
+<li>Gian-Carlo Rota's Lesson 10: Alumni who return to visit [MIT]
+<a href="http://www.math.tamu.edu/~cyan/Rota/mitless.html">invariably complain </a> of not having taken enough math courses while
+they were undergraduates</li>
+
+<li>Since it is <a href="http://www.dartmouth.edu/~matc/MathDrama/reading/Wigner.html">unreasonably effective</a>.</li>
+
+<li>Apparently it's the <a href="http://www.careercast.com/jobs/content/JobsRated_Top200Jobs">best</a> job there is!</li>
+
+<li><p>
+A secret weapon, <a href="https://www.scientificamerican.com/article/the-maths-of-life-and-death-our-secret-weapon-in-the-fight-against-disease/">The Maths of life and death</a>. 
+</p>
+
+<p>
+"Maths is the language of science. It crops up everywhere from
+physics to engineering and chemistry – aiding us in understanding
+the origins of the universe and building bridges that won’t
+collapse in the wind. Perhaps a little more surprisingly, maths is
+also increasingly integral to biology."
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org09210a0" class="outline-2">
+<h2 id="org09210a0">Seminars/Workshops/Conferences</h2>
+<div class="outline-text-2" id="text-org09210a0">
+<ul class="org-ul">
+<li><a href="https://maillist.sys.kth.se/mailman/listinfo/numbertheory">KTH/SU number theory mailing list</a></li>
+
+<li><a href="https://people.kth.se/~kurlberg/ntseminar/">KTH/SU Number theory seminar</a></li>
+
+<li><a href="https://people.kth.se/~kurlberg/analysis-seminar/ht16.html">KTH analysis seminar</a></li>
+
+<li><a href="https://people.kth.se/~kurlberg/nordic_nt_16.html">Number theory session at the 17th Nordic Congress</a> (Stockholm, March 17-19, 2016)</li>
+
+<li><a href="http://www.kth.se/sci/institutioner/math/kalender/dna?date=2010-09-21&amp;length=1">Number theory miniworkshop</a> (Sep 21, 2010).</li>
+
+<li><a href="http://www.sci.kth.se/institutioner/math/kalender/dna">Dynamical systems, Number theory, Analysis (DNA)</a></li>
+
+<li><a href="http://www.sci.kth.se/institutioner/math/kalender/dna-l">DNA-L</a> ("L" is for "light" or "learning".)</li>
+
+<li><a href="colloquium">KTH/SU Mathematics Colloquium</a></li>
+
+<li><a href="http://people.kth.se/~hytonen/meeting/">Finnish-Swedish Number Theory Conference</a> (May 26-28, 2010).</li>
+
+<li><a href="./comp-nt-workshop08/index.html">CIAM/DNA mini-workshop on Computational Number Theory</a> (May 15, 2008)</li>
+
+<li><a href="./expsum">Exponential sum working group</a> (Spring 2007)</li>
+
+<li><a href="./workshop0504">DNA Workshop</a> (April 14, 2005)</li>
+</ul>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org2d7249d" class="outline-2">
+<h2 id="org2d7249d">Contact information</h2>
+<div class="outline-text-2" id="text-org2d7249d">
+<pre class="example">
+Email: My last name at math.kth.se. (Spam problems.)
+Phone: +46 (0)8 790 6582
+Fax:   +46 (0)8 723 1788
+
+Mailing address:
+Par Kurlberg
+Department of Mathematics
+KTH
+SE-10044, Stockholm
+Sweden
+</pre>
+
+<p>
+<a href="public-key.html">GnuPG key</a> 
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-org056d884" class="outline-2">
+<h2 id="org056d884">Misc computer notes</h2>
+<div class="outline-text-2" id="text-org056d884">
+<p>
+<a href="student_list.html">How to get a list of students</a> in your course (with email + pnr etc).
+</p>
+
+<p>
+Hint and tips for <a href="https://people.kth.se/~kurlberg/room_booking.html">KTH room booking via exchange</a>.
+</p>
+
+<p>
+Latex <a href="https://people.kth.se/~kurlberg/kthbrev/">template</a> for official kth math letters.
+</p>
+
+<p>
+Some other <a href="./kth-comp.html">KTH computer notes</a>.
+</p>
+
+<p>
+<a href="http://shell-linux.math.kth.se/">Secure shell</a>
+</p>
+
+<hr />
+</div>
+</div>
+
+<div id="outline-container-orge61c96b" class="outline-2">
+<h2 id="orge61c96b">Some links</h2>
+<div class="outline-text-2" id="text-orge61c96b">
+<p>
+(Mostly to help google do the right.)
+</p>
+
+
+<p>
+<a href="http://lokal2.timeedit.se/kth/">KTH lokalbokning</a>
+</p>
+
+<hr />
+
+
+<div class="HTML">
+<p>
+&lt;script type="text/javascript"&gt;
+</p>
+
+<p>
+var _gaq = _gaq || [];
+_gaq.push(['<sub>setAccount</sub>', 'UA-37946015-1']);
+_gaq.push(['<sub>trackPageview</sub>']);
+</p>
+
+<p>
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</p>
+
+<p>
+&lt;/script&gt;
+</p>
+
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2021-06-04 Fri 08:48</p>
+<p class="validation"></p>
+</div>
+</body>
+</html>
