@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-03-17 Mon 01:14 -->
+<!-- 2025-11-03 Mon 19:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Some KTH computer tips</title>
@@ -235,7 +235,7 @@
 The best way so far seems to be to use SSH-tunnelled sendmail (with
 kerbererized SSH, of course).  E.g., first run
 </p>
-<pre class="example" id="org111cd9f">
+<pre class="example" id="orgdf3236c">
 mkdir -p ~/share/bin
 cd ~/share/bin
 wget http://www.slac.com/~mpilone/projects/kde/kmailssh/sshsendmail.sh
@@ -243,7 +243,7 @@ wget http://www.slac.com/~mpilone/projects/kde/kmailssh/sshsendmail.sh
 <p>
 and then put this into your ~/.emacs:
 </p>
-<pre class="example" id="org1ba77cb">
+<pre class="example" id="org3e27107">
 (setq sendmail-program "~/share/bin/sshsendmail.sh")
 </pre>
 <p>
@@ -278,7 +278,7 @@ installed.  I suppose you'd better replace "your-user-name" below
 with, well, your user name.
 </p>
 
-<pre class="example" id="org583ce2a">
+<pre class="example" id="org1321fef">
 (setq message-send-mail-function 'smtpmail-send-it
       smtpmail-starttls-credentials '(("smtp.kth.se" 587 nil nil))
       smtpmail-auth-credentials 
@@ -298,7 +298,7 @@ with, well, your user name.
 On Ubuntu (it probably works on Debian too), the following will
 install the program imtest with GSSAPI capabilities:
 </p>
-<pre class="example" id="org6d79f99">
+<pre class="example" id="orgfbfd74d">
 apt-get install cyrus-clients-2.2
 apt-get install libsasl2-modules-gssapi-heimdal
 </pre>
@@ -306,7 +306,7 @@ apt-get install libsasl2-modules-gssapi-heimdal
 <p>
 You can now put the following in your ~/.gnus:
 </p>
-<pre class="example" id="orgd4296cb">
+<pre class="example" id="orgc777635">
 (setq gnus-select-method '(nnnil))   ; It is hard to believe, but KTH 
                                      ; no longer has a news server!
 (setq gnus-secondary-select-methods
@@ -332,7 +332,7 @@ have to retype your password as often.
 Put this into your ~/.gnus:
 </p>
 
-<pre class="example" id="org537823b">
+<pre class="example" id="org3fa0ef5">
 (setq gnus-select-method '(nnnil))   ; It is hard to believe, but KTH 
                                      ; no longer has a news server!
 (setq gnus-secondary-select-methods
@@ -364,7 +364,7 @@ How do I avoid typing my password so often?
 Put this into your ~/.ssh/config
 </p>
 
-<pre class="example" id="org11d958d">
+<pre class="example" id="org52dcbf5">
 GSSAPIAuthentication yes
 GSSAPIDelegateCredentials yes
 </pre>
@@ -372,7 +372,7 @@ GSSAPIDelegateCredentials yes
 <p>
 To get tickets, type
 </p>
-<pre class="example" id="org04e79a5">
+<pre class="example" id="org60bad17">
 kauth -f --no-addresses
 </pre>
 </div>
@@ -409,7 +409,7 @@ Don't!  Use <a href="http://orgmode.org/">Org mode</a> instead.
 <p>
 On the server, run:
 </p>
-<pre class="example" id="orgc66fa31">
+<pre class="example" id="org5cf4ae9">
 ls /etc/ssh/*.pub| xargs -n 1 ssh-keygen -lf
 
 # Newer sshd uses the SHA256 hash.  In case your client reports 
@@ -429,7 +429,7 @@ ls /etc/ssh/*.pub| xargs -n 1 ssh-keygen -E md5 -lf
 <div id="outline-container-orgf0264ea" class="outline-3">
 <h3 id="orgf0264ea">Find stuff on home network</h3>
 <div class="outline-text-3" id="text-orgf0264ea">
-<pre class="example" id="org54d0870">
+<pre class="example" id="orgf86c733">
 nmap -sP 192.168.0.1/24
 </pre>
 
@@ -437,7 +437,7 @@ nmap -sP 192.168.0.1/24
 or, use arp:
 </p>
 
-<pre class="example" id="orgb2c546c">
+<pre class="example" id="orgdf174c9">
 arp -a
 </pre>
 </div>
@@ -446,7 +446,7 @@ arp -a
 <div id="outline-container-orgddc8de7" class="outline-3">
 <h3 id="orgddc8de7">check open ports</h3>
 <div class="outline-text-3" id="text-orgddc8de7">
-<pre class="example" id="orgc3fb795">
+<pre class="example" id="orgaa45514">
 sudo netstat -tunlp ahost.math.kth.se
 </pre>
 </div>
@@ -459,13 +459,13 @@ sudo netstat -tunlp ahost.math.kth.se
 <p>
 To restart, run:
 </p>
-<pre class="example" id="orgc82ad84">
+<pre class="example" id="org9245e76">
 pulseaudio -k &amp;&amp; sudo alsa force-reload
 </pre>
 <p>
 or possibly
 </p>
-<pre class="example" id="org25ed1de">
+<pre class="example" id="orga0f9b8f">
 pulseaudio --kill
 sudo alsa force-reload
 pulseaudio --start
@@ -480,20 +480,20 @@ Other things to try is "pulseaudio &#x2013;kill", then rm -r ~/.pulse (or
 <p>
 If 
 </p>
-<pre class="example" id="org688a5e7">
+<pre class="example" id="orgf9e0d13">
 sudo aplay /usr/share/sounds/alsa/Front_Center.wav
 </pre>
 <p>
 make sound, but user mode aplay does not, try:
 </p>
-<pre class="example" id="orgef9e475">
+<pre class="example" id="org405aa00">
 aplay -D sysdefault:CARD=PCH  /usr/share/sounds/alsa/Front_Center.wav
 </pre>
 
 <p>
 Sometime master volume is muted, fix:
 </p>
-<pre class="example" id="org97f75ca">
+<pre class="example" id="org5f8e2be">
 amixer -D pulse set Master 1+ unmute
 </pre>
 </div>
@@ -507,14 +507,14 @@ amixer -D pulse set Master 1+ unmute
 <p>
 Run: 
 </p>
-<pre class="example" id="orged7e30a">
+<pre class="example" id="orgcbccd82">
 udisksctl power-off -b /dev/sdX
 </pre>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2025-03-17 Mon 01:14</p>
+<p class="date">Created: 2025-11-03 Mon 19:04</p>
 </div>
 </body>
 </html>

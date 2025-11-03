@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Number theory session: abstracts</title>
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/javascript" src="http://orgmode.org/mathjax/MathJax.js"></script>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+    MathJax.Hub.Config({
+        // Only one of the two following lines, depending on user settings
+        // First allows browser-native MathML display, second forces HTML/CSS
+        //  config: ["MMLorHTML.js"], jax: ["input/TeX"],
+            jax: ["input/TeX", "output/HTML-CSS"],
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "2em",
+
+        "HTML-CSS": {
+             scale: 100,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Number theory session: abstracts</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">Henryk Iwaniec,   Critical zeros of \(L\)-functions</a></li>
+<li><a href="#sec-2">Steve Lester, Small scale equidistribution of eigenfunctions on the torus</a></li>
+<li><a href="#sec-3">Martin Westerholt-Raum, Harmonic weak Siegel Maass forms</a></li>
+<li><a href="#sec-4">Per Salberger, Counting rational points on cubic curves</a></li>
+<li><a href="#sec-5">Anders Södergren, Low-lying zeros of Artin \(L\)-functions</a></li>
+<li><a href="#sec-6">Morten Risager, The hyperbolic circle problem</a></li>
+<li><a href="#sec-7">Fabien Pazuki, Bad reduction of curves with CM jacobians</a></li>
+<li><a href="#sec-8">Julia Brandes, Linear spaces on hypersurfaces with a prescribed discriminant</a></li>
+<li><a href="#sec-9">Roope Vehkalahti, Coding on random lattices</a></li>
+<li><a href="#sec-10">Wushi Goldring, Algebraicity of automorphic representations</a></li>
+<li><a href="#sec-11">James Parks, Low-lying zeros of quadratic Dirichlet L-functions</a></li>
+<li><a href="#sec-12">Tapani Matala-Aho, Around transcendence</a></li>
+<li><a href="#sec-13">Simon Kristensen, Orbits of rotations and beyond</a></li>
+<li><a href="#sec-14">Lior Rosenzweig, Diophantine approximation in matrices and Lie groups</a></li>
+<li><a href="#sec-15">Fred Diamond, Serre weights and wild ramification</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1">Henryk Iwaniec,   Critical zeros of \(L\)-functions</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+This will be a survey talk on the distribution of zeros of
+the Riemann zeta function and the Dirichlet \(L\)-series on the critical
+line. The most recent result (joint with Brian Conrey and Kannan
+Soundararajan) asserts that the \(L\)-functions have at least 60% zeros on
+the line on average with respect to the characters. Small and large
+gaps between zeros will be also discussed.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2">Steve Lester, Small scale equidistribution of eigenfunctions on the torus</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+I will describe some recent results on the distribution of the
+\(L^2\)-mass of eigenfunctions of the Laplacian on the torus
+\(\mathbb{T}^d/ 2\pi \mathbb R^d\). A special case of a result of
+Marklof and Rudnick implies that the \(L^2\)-mass of almost all such
+eigenfunctions equidistributes with respect to Lebesgue measure for
+\(d=2\). I will discuss results on the scales at which the \(L^2\)-mass
+equidistributes as well as mention some limitations on
+equidistribution, and relate these questions to arithmetic problems
+such as representing integers as sums of squares and the distribution
+of lattice points.  
+</p>
+
+<p>
+This is joint work with Zeev Rudnick. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3">Martin Westerholt-Raum, Harmonic weak Siegel Maass forms</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Harmonic weak Maass forms for \(SL(2,\mathbb{R})\)
+where defined by Bruinier and Funke more than ten years ago. They have
+been successfully applied to combinatorial problems thanks to their
+overlap with indefinite theta functions. Their genuine arithmetic, on
+the other hand, is linked to derivatives of \(L\)-series, as demonstrated
+by Bruinier and Ono. We start by revisiting these connections.
+</p>
+
+<p>
+Siegel modular forms are modular forms for the group \(Sp(g,\mathbb{R})\).
+If \(g=1\)
+they coincide with elliptic modular forms, but in the general case
+they are more intricate. In joint work with Bringmann and Richter, the
+speaker studied real analytic Siegel modular forms and connected their
+Fourier Jacobi coefficients in the case of \(g=2\) to harmonic weak Maass
+forms for \(SL(2,\mathbb{R})\). We showcase this connection, and exhibit the
+importance of Fourier Jacobi coefficients in the study of Siegel
+modular forms.
+</p>
+
+<p>
+Finally, we discuss the existence of harmonic weak Siegel Maass forms. Using 
+the connection of Eisenstein series and principal series representations, one 
+manages to obtain sufficiently tight control of Dolbeault cohomology to show 
+that every non-holomorphic Saito-Kurokawa lift can be further lifted to a 
+harmonic weak Siegel Maass form. We discuss potential applications to 
+derivatives of \(L\)-series.
+</p>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4">Per Salberger, Counting rational points on cubic curves</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+We present a new uniform bound for the number of rational points of
+height at most \(B\) on non-singular cubic curves, which improves upon
+previous bounds of Ellenberg/Venkatesh and Heath-Brown/Testa.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5">Anders Södergren, Low-lying zeros of Artin \(L\)-functions</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+In this talk we discuss the distribution of low-lying zeros
+of certain families of Artin L-functions attached to geometric
+parametrizations of number fields. We describe several explicit
+examples of such families and in each case we verify the Katz-Sarnak
+heuristics and present the symmetry type of the distribution of
+low-lying zeros. 
+</p>
+
+
+<p>
+This is joint work with Arul Shankar and Nicolas
+Templier. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6">Morten Risager, The hyperbolic circle problem</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+We review the hyperbolic circle problem and explain some recent
+results concerning the error term. We also explain how these results
+relate to \(L\)-functions of certain automorphic forms and conjectures
+about these.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7">Fabien Pazuki, Bad reduction of curves with CM jacobians</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+An abelian variety defined over a number field and having
+complex multiplication (CM) has potentially good reduction
+everywhere. If a curve of positive genus which is defined over a
+number field has good reduction at a given finite place, then so does
+its jacobian variety. However, the converse statement is false already
+in the genus \(2\) case, as can be seen in the entry \([I_0-I_0-m]\) in
+Namikawa and Ueno's classification table of fibres in pencils of
+curves of genus \(2\). In this joint work with Philipp Habegger, our main
+result states that this phenomenon prevails for certain families of
+curves.
+</p>
+
+<p>
+We prove the following result: Let \(F\) be a real quadratic number
+field. Up to isomorphisms there are only finitely many curves \(C\) of
+genus \(2\) defined over \(\overline{\mathbb{Q}}\) with good reduction
+everywhere and such that the jacobian \(Jac(C)\) has CM by the maximal
+order of a quartic, cyclic, totally imaginary number field containing
+\(F\). Hence such a curve will almost always have stable bad reduction at
+some prime whereas its jacobian has good reduction everywhere. A
+remark is that one can exhibit an infinite family of genus \(2\) curves
+with CM jacobian such that the endomorphism ring is the ring of
+algebraic integers in a cyclic extension of \(\mathbb{Q}\) of degree \(4\)
+that contains \(\mathbb{Q}(\sqrt{5})\).
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8">Julia Brandes, Linear spaces on hypersurfaces with a prescribed discriminant</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+For a given form \(F \in \mathbb{Z}[x_1,\dots,x_s]\) we apply the circle
+method in order to give an asymptotic estimate of the number of
+\(m\)-tuples \(\mathbf x_1, \dots, \mathbf x_m\) on the hypersurface \(F(X)
+= 0\) having \(\det ( \mathbf x_1, \dots, \mathbf x_m)^t \, (\mathbf
+x_1, \dots, \mathbf x_m)) = b\). As a corollary, we obtain a count of
+rational linear spaces contained in the hypersurface \(F(\mathbf x) =
+0\) having dimension exactly \(m\), thus addressing a weakness of
+previous results.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9">Roope Vehkalahti, Coding on random lattices</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Classical information theory of additive white Gaussian noise channels
+naturally suggests several coding theoretic problems that can be
+formulated on lattice theoretic language. For example, performance of
+a lattice code can be roughly estimated by it's Hermite invariant and
+behavior of the related theta function.
+</p>
+
+<p>
+Modern wireless communication channels assume use of multiple antennas
+and that the transmitted signal gets faded by scattering
+environment. On such channels classical lattice codes will not perform
+well. In this talk we will describe how coding in modern fading
+channels can be seen as coding on random lattice ensembles and how
+this perspective transforms classical questions into new ones.
+</p>
+
+<p>
+In particular we will show how classical Hermite invariant can be
+replaced by different homogeneous forms and how class field towers
+with constant root discriminants and non-commutative algebra can be
+applied in building capacity approaching lattice codes for fading
+channels.
+</p>
+
+<p>
+If time allows we will discuss how averaging transforms theta
+functions of lattices into sums of different type and how these sums
+can be analyzed by employing methods from classical algebraic number
+theory and ergodic theory on Lie groups.  
+</p>
+
+
+<p>
+The talk is based on joint work with Laura Luzzi and Francis Lu. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10">Wushi Goldring, Algebraicity of automorphic representations</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+One striking implication of Langlands' conjectures for
+number fields is that many automorphic representations which are
+initially defined by analytic and/or representation-theoretic means
+should have deep algebro-geometric properties, ranging from the
+algebraicity of Hecke eigenvalues, to the existence of associated
+Galois representations and ultimately pure motives. An example of a
+long-standing open problem in this area which admits an elementary
+formulation is to prove that Maass forms of eigenvalue \(1/4\) have
+algebraic Hecke eigenvalues. Two approaches have been used to verify
+Langlands' predictions: (1) Finding and exploiting a direct link with
+algebraic geometry and (2) Using Langlands' Functoriality Principle. I
+will discuss the possibilities and limitations of the two approaches
+and report on recent work on each approach. The results using the
+geometric approach are joint work with Jean-Stefan Koskivirta, see
+arXiv:1507.05032.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11">James Parks, Low-lying zeros of quadratic Dirichlet L-functions</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+In this talk we study the \(1\)-level density of low-lying zeros of
+Dirichlet \(L\)-functions attached to real primitive characters of
+conductor at most \(X\). We obtain an asymptotic expansion of this
+quantity with lower order terms in descending powers of \(\log X\). We
+show that this is valid under GRH when the support of the Fourier
+Transform of the implied even test function \(\phi\) is contained in
+\((-2,2)\). We also uncover a phase transition when the supremum of the
+support of $\widehat &phi; $ reaches \(1\), where a new lower order term
+appears. 
+</p>
+
+
+<p>
+This is joint work with Daniel Fiorilli and Anders Södergren. 
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12">Tapani Matala-Aho, Around transcendence</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+We will discuss on selected tools used in transcendence methods and
+Diophantine approximations.
+</p>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-13" class="outline-2">
+<h2 id="sec-13">Simon Kristensen, Orbits of rotations and beyond</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+The orbit of a rotation of the unit circle has one of two behaviours as a
+dynamical system, depending on whether the angle of rotation is a rational
+or an irrational multiple of \(2\pi\). In the rational case, any orbit is
+periodic; in the irrational case, any orbit is dense and in fact uniformly
+distributed. A quantitative form of the uniform distribution of the
+irrational orbits can be studied via the discrepancy of the sequence
+\(\{n\alpha\}\) which in turn depends heavily on the continued fraction
+expansion of \(\alpha\).
+</p>
+
+<p>
+The study of orbits of rotations leads naturally to the notion of twisted
+Diophantine approximation &#x2013; a form of inhomogeneous Diophantine
+approximation, where one fixes the homogeneous parameter and studies the
+possible approximation properties of the inhomogeneous parameter as it
+varies. 
+</p>
+
+<p>
+With Bugeaud, Harrap and Velani, we proved that the natural analogue of
+badly approximable elements exist in abundance. To be precise, we proved
+that for any \(\alpha \in \mathbb{R}\), the set
+\[
+\left\{x \in [0,1) : \Vert n\alpha - x\Vert \ge \frac{K(x)}{n} \text{ for
+some \(K(x)> 0\) for all $n \in \mathbb{N}$}\right\}
+\]
+has maximal Hausdorff dimension and that this property is stable under
+intersection with sufficiently nice fractals. In recent work in progress
+with Tseng, this result is extended to the case when the rotation is
+replaced by an Interval Exchange Transformation (IET). The added
+difficulty of the IET setting comes from some highly geometric and
+dynamical obstacles to a sufficiently nice behaviour of the appropriate
+analogue of continued fractions.
+</p>
+</div>
+</div>
+
+
+
+<div id="outline-container-sec-14" class="outline-2">
+<h2 id="sec-14">Lior Rosenzweig, Diophantine approximation in matrices and Lie groups</h2>
+<div class="outline-text-2" id="text-14">
+<p>
+A classical question in Diophantine approximation is how well can a
+real number be approximated by rationals. In this talk I will discuss
+generalization of this question in two direction, namely to
+approximation on submanifolds of R<sup>n</sup> , and more specifically to
+submanifold of matrices, and approximation in Lie groups. We will also
+discuss the optimal Diophantine exponent.
+</p>
+
+<p>
+This is joint work with M. Aka, E. Breuillard and N. de Saxce
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-15" class="outline-2">
+<h2 id="sec-15">Fred Diamond, Serre weights and wild ramification</h2>
+<div class="outline-text-2" id="text-15">
+<p>
+Serre's Conjecture (proved by Khare and Wintenberger) asserts that
+every odd, irreducible representation from \(\operatorname{Gal}(K/\mathbb{Q})\) to
+\(GL_2(\mathbb{F}_{p^r})\) arises from a modular form; furthermore Serre
+specifies the minimal weight and level of a form giving rise to the
+Galois representation.  The recipe for the weight depends on the local
+behavior of the representation at the prime \(p\), and this dependence
+becomes much more subtle in generalizations of Serre's Conjecture.  In
+particular, when \(\mathbb{Q}\) is replaced by a totally real field, work of Gee
+and others determines the weights of Hilbert modular forms giving rise
+to a mod \(p\) Galois representation in terms of the existence of
+crystalline lifts, but the dependence of the weights on wild
+ramification is not explicit. I'll discuss joint work with Dembele
+and Roberts towards making it so, or equivalently, describing wild
+ramification in reductions of two-dimensional crystalline Galois
+representations.
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="validation"></p>
+</div>
+</body>
+</html>
