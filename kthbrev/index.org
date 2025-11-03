@@ -1,0 +1,31 @@
+#+TITLE: KTH math latex letter template
+#+OPTIONS: toc:nil author:nil num:nil creator:nil
+
+These are the latest [[file:kthletter.tar][templates]] I have been able to locate.  (Caveat:
+there appears to be some conflicts with the older files, in particular
+if you have set \homepage in kthletter.cfg .)
+
+(These and some other KTH-relevant latex files can be found
+[[https://gits-15.sys.kth.se/giampi/kthlatex][here]]. Unfortunately login is required.)
+
+
+-----
+
+The files below are out of date, but are kept in case you want to tex
+old letters.
+
+For making an official looking letter (i.e., with the KTH logo etc),
+the following files might be useful:
+
+ - Latex template for the actual letter: [[file:kthbrev.tex]] (produces
+   [[file:kthbrev.pdf]] with pdflatex.)
+
+ - Style file and example configuration file:
+   [[file:kthletter-utf8.cls]] [[file:kthletter.cfg]]
+
+ - Graphics for the logos: [[file:KTH_en_cmyk.eps]] [[file:KTH_en_cmyk.pdf]]
+   [[file:KTH_sv_cmyk.eps]] [[file:KTH_sv_cmyk.pdf]]
+
+Here is a more up to date [[file:kthbrev2.tar][version]].
+
+
