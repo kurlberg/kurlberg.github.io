@@ -1,0 +1,430 @@
+/* ADMIN SPECIFIC*/
+#divContentInlineWrapper,#divEditor,#divEditor td,#divContentInlineWrapper td, #divEditor select,#divContentInlineWrapper select,#divEditor input,#divContentInlineWrapper input,#divContentInlineWrapper textarea,#divEditor textarea,#divEditor div,#divContentInlineWrapper div{
+	font-family:verdana;
+	font-size: 10px;
+}
+#diveditor a, #divContentInlineWrapper a{color:#2059A6;text-decoration:none;}
+#diveditor a img, #divContentInlineWrapper a img{border:0px;}
+#diveditor a font, #divContentInlineWrapper a font{color:#2059A6 !important;text-decoration:none !important;}
+
+/*END ADMIN SPECIFIC*/
+P{margin:0px;padding:0px;}
+/* BEGIN SF selectable classes from admin*/
+/*SF Headings*/
+.headingBoldBig, .headingBoldBig a{font-size:18px;font-weight:bold;}
+.headingBoldMedium, .headingBoldMedium a{font-size:14px;font-weight:bold;}
+.headingBoldSmall, .headingBoldSmall a{font-size:10px;font-weight:bold;}
+.headingSmallStartPages, headingSmallStartPages a{display:block;padding:16px 0px 10px 0px;font-size:10px;font-weight:bold;}
+.heading1{font-size:14px;color:#333333;}
+.heading{font-size:12px !important;color:#2059AA !important;font-weight:bold;}
+/*SF abstract*/
+.textSmallBlk1{font-size:10px;font-style:italic;}
+/*SF bodyText*/
+.bodyText{font-size:10px;color:#000000;}
+.bodyTextDarkGrey{font-size:10px;color:#333333;}
+.bodyTextBig{font-size:14px;color:#000000;}
+.bodyTextMedium{font-size:12px;color:#000000;}
+.bodyTextBigDarkGrey{font-size:14px;color:#333333;}
+.bodyTextItalic{font-size:10px;color:#000000;font-style:italic;}
+/* END SF selectable classes from admin*/
+
+A.visited:visited{font-weight: bold;color: #4476BB;	text-decoration: none;}
+A.visited:link {text-decoration: none;color: #2059AA; font-weight:bold;}
+
+/*Classes*/
+.red{color:#FE0002;}
+.blue{color:#2059AA;}
+.grey{color:#9E9E9E;}
+.darkGrey{color:#333333;}
+.white{color:#FFFFFF;}
+.black{color:#000000;}
+.bold{font-weight:bold;}
+.italic{font-style:italic;}
+/*Text style classes*/
+.headingBigNotice{font-size:18px;font-weight:bold;}
+.headingMediumNotice{font-size:14px;font-weight:bold;}
+.headingMediumNoticeBlue{color:#2059AA;font-size:14px;}
+/*Forms*/
+.searchDropWide
+{
+	/*ie mac*/
+	width:137px;
+	/*end if mac \*/
+	width:140px;
+	/*end comment*/
+}
+/*Backgrounds*/
+.bgGrey{background:#CCCDC7;}
+.bgWhite{background:#FFFFFF;}
+.bgBlack{background:#000000;}
+.bgBlue{background:#2059A6;}
+.bgLightBlue{background:#DCE4F1;}
+.bgBeige{background:#EBEBE0;}
+.bgDarkBeige{background:#CDCDC2;}
+/*OBJECT ITEMS (WRAPPERS)*/
+.wrapperNotices{padding:10px 6px 10px 7px;}
+.square
+{
+	width:4px;
+	height:4px;
+	font-size:1px;
+	overflow:hidden;
+	float:left;
+	margin:5px 5px 0px 0px;
+}
+/*SPACERS*/
+.spaceX,.space1,.space2,.space3,.space5,.space9{overflow:hidden;width:100%;font-size:1px;}
+.space1{height:1px;}
+.space2{height:2px;}
+.space3{height:3px;}
+.space5{height:5px;}
+.space9{height:9px;}
+.alignCenter{text-align:center;}
+.imgBorder{border:solid 1px #333333;}
+/*id classes*/
+/*Site column design*/
+div#divSearchHeader
+{
+	padding:0px;
+	margin:0px;
+	height:26px;
+}
+div#divSearchHelp
+{
+	position:absolute;
+	visibility:hidden;
+	padding:10px 10px 10px 10px;
+	top:0px;
+	left:0px;
+	border:1px solid #CDCDC2;
+	width:130px;
+	background:#EBEBE0;
+	z-index:100;
+}
+div#divHelpText
+{
+	position:absolute;
+	visibility:hidden;
+	width:130px !important;
+	padding:10px 10px 10px 10px;
+	top:0px;
+	left:0px;
+	border:1px solid #CDCDC2;	
+	background:#DCE4F1;
+	z-index:3000;
+	overflow:hidden;
+}
+.divSearchWrapper
+{
+	background-color: #DCE4F1;
+	width:150px;
+	wid\th:145px;
+	padding-left:3px;
+	border-right:1px solid #000000;
+	border-bottom:1px solid #000000;
+	border-left:1px solid #000000;
+}
+div#divContent{width:760px;}
+div#divContentMiddle{
+	float:left;
+	width:587px;
+	margin-right:5px;
+	margin-left:16px;
+	color:#333333; /*Default on all content*/
+}
+div#divContentMiddleEmpty{
+	float:left;
+	width:587px;
+	margin-right:5px;
+	margin-left:16px;
+}
+div#divContentLeft{float:left;width:150px;}
+div#divRightBanner
+{
+	position:absolute;
+	left:770px;
+	top:82px;
+	width:140px;
+}
+div#divHeader{width:753px;}
+div#divFooter{
+	clear:left;
+	padding-top:9px;
+	margin-top:0px;
+	margin-left:166px;
+	border-top:1px solid #CECEC2;
+	width:587px;
+}
+div#divFooterHemnet{
+	clear:left;
+	padding-top:9px;
+	margin-top:0px;
+	margin-left:0px;
+	padding-bottom: 10px;
+	border-top:1px solid #CECEC2;
+	width:587px;
+}
+div#divContentMiddleLeft{
+	float:left;
+	width:424px;
+	padding-right:5px;
+	border-right:solid 1px #CCCDC8;
+}
+div#divContentMiddleRight{
+	margin-left:6px;
+	float:left;
+	width:151px;
+}
+/*MENU*/
+div#divMenuRow{height:17px;}
+div#menuItemLevel1Active{float:left;background:#2059A6;height:17px;}
+div#menuItemLevel{float:left;padding-top:2px;}
+div#menuItemSeparator{float:left;}
+.menu{font-size:10px;}
+/*OFFICE MENU*/
+div#topBarNavigationBarDiv{
+	margin:0px 0px 0px 0px;
+	height:auto;
+	border-bottom:1px solid #2059A6;
+	clear:right;
+}
+div#topBarNavigationBarDiv div{
+	float:left;
+	position:relative;
+	z-index:0;
+	margin-left:-1px;
+	height:20px;
+	heig\ht:20px;
+	width:auto;
+}
+div#topBarNavigationBarDiv a{
+	position:relative;
+	z-index:0;
+	font-weight:normal;
+	text-decoration:none;
+	height:16px;
+	display:block;
+	margin:4px 0px 0px 0px;
+	padding:0px 19px 0px 0px;	
+	white-space:nowrap;
+}
+div#topBarNavigationBarDiv div.selectedNode{padding-left:10px;}
+div#topBarNavigationBarDiv div.selectedNode a{color: #FFFFFF;}
+/*Object presentation*/
+div#divObjectPresentationMiddle{float:left;width:413px;border-right:1px solid #CECEC2;padding-right:5px;margin-right:5px !important;color:#333333;}
+div#divObjectPresentationRight{
+	float:left;
+	/*ie mac stupid fix*/
+	width:162px;
+	/*end if mac \*/
+	width:163px;
+	/*end comment*/
+}
+div#divFunctionHeader{background: #CDCDC2;padding: 6px 0px 6px 7px;}
+div#divFunctionItem{background: #EBEBE0;padding: 10px 0px 10px 7px;}
+.divFunctionItem{background: #EBEBE0;padding: 10px 0px 10px 7px;}
+div#divEstateAgent{background: #EBEBE0;padding: 10px 7px 15px 7px;}
+div#divShowMore{padding: 10px 7px 10px 7px;}
+/*Object presentation Print*/
+div#divObjectPresentationPrint
+{
+	width:563px;
+}
+div#divObjectPresentationPrintDescription
+{
+	width:415px;
+}
+/*Object presentation Hemnet*/
+div#divHemnetWrapper
+{
+	width:590px;
+}
+/*Document*/
+div#divContentMiddleLeftDocument{
+	width:418px;
+	padding-right:5px;
+}
+div#divContentMiddleLeftDocumentTwoColumns{
+	width:418px;
+	border-right:solid 1px black;
+	padding-right:5px;
+}
+div#divContentMiddleListing{
+	width:523px;
+	padding-right:5px;
+}
+/*Tools*/
+div#divVisitingCard
+{
+	display:none;
+	padding:10px;
+	width:258px;
+	border:solid 1px #CDCDC2;
+	background-color:#EBEBE0;
+	z-index:200;
+}
+div#divLoadingWrapper
+{
+	position:absolute;
+	z-index:3000;
+	top:0px;
+	left:0px;
+	visibility:hidden;
+}
+div#divSFLoading
+{
+	position:absolute;
+	left:100px;
+	top:200px;
+	z-index:2000;
+	visibility:hidden;
+	width:200px;
+	padding:20px 5px 20px 5px;
+	border:1px solid #000000;
+	text-align:center;
+	background:#FFFFFF;
+}
+div#divVerifyEmailWrapper
+{
+	position:absolute;
+	z-index:3001;
+	top:0px;
+	left:0px;
+	visibility:hidden;
+}
+div#divVerifyEmail
+{
+	width:346px;
+	height:155px;
+	position:absolute;
+	left:140px;
+	top:150px;
+	visibility:hidden;
+	border:solid 1px black;
+	background:#FFFFFF;
+	padding:20px;
+}
+/*Search*/
+div#divSearchResultType
+{
+	background-color:#DCE4F1;
+	padding: 8px 0px 8px 4px;
+}
+.searchResultHeading, .searchResultHeadingSelected
+{
+	padding-left:5px;
+	height:24px;
+}
+.searchResultHeading a{color:#2059A6 !important;}
+.searchResultHeadingSelected a{color:#FFFFFF;}
+.searchResultItemHeader, .searchResultItemHeader
+{
+	padding-left:5px;
+	padding-right:5px;
+	height:25px;
+	border-bottom:3px solid #FFFFFF;	
+	border-top:1px solid #CDCDC2;
+}
+.searchResultItem{
+	padding-left:5px;
+	padding-right:5px;
+	height:25px;
+	border-top:1px solid #CDCDC2;
+	border-bottom:3px solid #FFFFFF;	
+}
+.searchResultItemNoBorder{padding:4px 5px 4px 5px;}
+.listHeader{padding:4px 0px 4px 5px;}
+/*BEGIN: Buy and sell guide*/
+.bsBullet{height:16px;padding:1px 0px 0px 5px;color:#FFFFFF;}
+.bsBullet span{padding-left:15px;color:#000000;}
+.bsBulletRight{height:16px;padding:1px 5px 0px 0px;color:#FFFFFF;text-align:right;}
+.bsBulletRight span{padding-right:15px;color:#000000;}
+.bsBulletHorizontal{position:relative;z-index:10;padding:1px 0px 0px 1px;color:#FFFFFF;text-align:center;}
+.bsBulletHorizontalSelected{position:relative;z-index:10;padding:1px 0px 0px 1px;color:#FFFFFF;text-align:center;font-weight:bold;}
+.bsBulletHorizontal span, .bsBulletHorizontalSelected span{color:#000000 !important;}
+.bsLineVertical{margin-left:6px;border-left:2px solid #BED3DF;height:7px;overflow:hidden;}
+.bsLineVerticalRight{margin-right:7px;height:7px;text-align:right;border-right:2px solid #BED3DF;overflow:hidden;}
+.bsLineHorizontal{position:absolute;top:8px;background:#BED3DF;height:2px;overflow:hidden;width:100%;z-index:9;}
+.tdHorizontal{left:0px;top:0px;position:relative;vertical-align:top;}
+.bsArrowDown{height:22px;padding:0px 0px 0px 4px;}
+.bsArrowDownRight{text-align:right;height:22px;padding:0px 4px 0px 0px;}
+img#bsArrowRight
+{
+	padding-top:3px;
+	/*ie mac stupid fix*/
+	padding-top:5px;
+	/*end if mac \*/
+}
+.bsLink{color:white !important;font-size:10px;}
+.bsLink:hover{font-weight:bold;}
+.bsItemWrapper{position:relative;}
+/*END: Buy and sell guide*/
+/* ------------- */
+/* CSS for siteMap */
+/* ------------- */
+.siteMapHolderDiv{
+	width:415px;
+}
+.siteMapNodeSet{
+	margin-top:10px;
+}
+.siteMapTopFolder{
+	float:left;
+}
+.sitemapFirstLevel{
+	display:block;
+	font:bold 10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	height:16px;
+	padding-top:4px;
+	text-decoration:none;
+	width:auto;
+}
+.sitemapSecondLevel{
+	display:block;
+	font:bold 10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	width:auto;
+}
+.sitemapThirdLevel{
+	display:block;
+	font:normal 10px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	text-decoration:none;
+	width:auto;
+}
+.siteMapNodeHeader{
+	display:block;
+}
+div#siteMapFolderImage{
+	cursor:hand;
+	cursor:pointer;
+	display:block;
+	float:left;
+	height:16px;
+	width:16px;
+	padding-right:10px !important;
+}
+div#siteMapFolderImageFolded{
+	cursor:hand;
+	cursor:pointer;
+	display:block;
+	float:left;
+	height:16px;
+	width:16px;	
+	padding-right:10px !important;
+}
+div#sitemapSecondLevel
+{
+	padding:2px 0px 0px 35px;
+}
+div#sitemapThirdLevel
+{
+	padding:2px 0px 0px 55px;
+}
+.squareLevelTwo
+{
+	margin:4px 10px 0px 0px !important;
+}
+.squareLevelThree
+{
+	margin:4px 10px 0px 0px !important;
+}

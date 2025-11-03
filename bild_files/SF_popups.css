@@ -1,0 +1,40 @@
+body
+{
+	margin:5px;
+}
+.iframeGulasidorna
+{
+	/*border:solid 1px #EBEBE0;*/
+}
+body#bodyObjectImages
+{
+	margin-top:20px;
+}
+div#divObjectImagesBorder
+{
+	width:100%;
+	border:solid 4px #205AA7;
+	padding-top:1px;
+}
+div#divObjectImages{
+	border:solid 4px #F5E956;
+	padding-top:40px;
+	padding-left:70px;
+	padding-right:70px;
+}
+
+div#divPopUpContent
+{
+	border-right:solid 1px #2059A6;
+	border-bottom:solid 1px #2059A6;
+	border-left:solid 1px #2059A6;
+	padding-top:1px;
+	background-color:#FFFFFF;
+}
+div#divPopUpRow
+{
+	padding-left:10px;
+	padding-right:10px;
+}
+
+
