@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2021-06-04 Fri 08:48 -->
+<!-- 2025-03-17 Mon 01:14 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Pär Kurlberg</title>
-<meta name="generator" content="Org mode" />
-<style type="text/css">
- <!--/*--><![CDATA[/*><!--*/
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
   .subtitle { text-align: center;
@@ -30,8 +30,9 @@
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
   pre {
-    border: 1px solid #ccc;
-    box-shadow: 3px 3px 3px #eee;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
     padding: 8pt;
     font-family: monospace;
     overflow: auto;
@@ -39,22 +40,22 @@
   }
   pre.src {
     position: relative;
-    overflow: visible;
-    padding-top: 1.2em;
+    overflow: auto;
   }
   pre.src:before {
     display: none;
     position: absolute;
-    background-color: white;
-    top: -10px;
-    right: 10px;
+    top: -8px;
+    right: 12px;
     padding: 3px;
-    border: 1px solid black;
+    color: #555;
+    background-color: #f2f2f299;
   }
-  pre.src:hover:before { display: inline;}
+  pre.src:hover:before { display: inline; margin-top: 14px;}
   /* Languages per Org manual */
   pre.src-asymptote:before { content: 'Asymptote'; }
   pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
   pre.src-C:before { content: 'C'; }
   /* pre.src-C++ doesn't work in CSS */
   pre.src-clojure:before { content: 'Clojure'; }
@@ -160,6 +161,19 @@
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
   .inlinetask {
     padding: 10px;
     border: 2px solid gray;
@@ -176,61 +190,14 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
-  .org-svg { width: 90%; }
-  /*]]>*/-->
+  .org-svg { }
 </style>
-<script type="text/javascript">
-/*
-@licstart  The following is the entire license notice for the
-JavaScript code in this tag.
-
-Copyright (C) 2012-2019 Free Software Foundation, Inc.
-
-The JavaScript code in this tag is free software: you can
-redistribute it and/or modify it under the terms of the GNU
-General Public License (GNU GPL) as published by the Free Software
-Foundation, either version 3 of the License, or (at your option)
-any later version.  The code is distributed WITHOUT ANY WARRANTY;
-without even the implied warranty of MERCHANTABILITY or FITNESS
-FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
-
-As additional permission under GNU GPL version 3 section 7, you
-may distribute non-source (e.g., minimized or compacted) forms of
-that code without the copy of the GNU GPL normally required by
-section 4, provided you include this license notice and a URL
-through which recipients can access the Corresponding Source.
-
-
-@licend  The above is the entire license notice
-for the JavaScript code in this tag.
-*/
-<!--/*--><![CDATA[/*><!--*/
- function CodeHighlightOn(elem, id)
- {
-   var target = document.getElementById(id);
-   if(null != target) {
-     elem.cacheClassElem = elem.className;
-     elem.cacheClassTarget = target.className;
-     target.className = "code-highlighted";
-     elem.className   = "code-highlighted";
-   }
- }
- function CodeHighlightOff(elem, id)
- {
-   var target = document.getElementById(id);
-   if(elem.cacheClassElem)
-     elem.className = elem.cacheClassElem;
-   if(elem.cacheClassTarget)
-     target.className = elem.cacheClassTarget;
- }
-/*]]>*///-->
-</script>
 </head>
 <body>
-<div id="content">
+<div id="content" class="content">
 <h1 class="title">Pär Kurlberg</h1>
 
-<div class="figure">
+<div id="orge279146" class="figure">
 <p><a href="pic/kurlberg.jpg"><img src="pic/kurlberg_thumb.jpg" alt="kurlberg_thumb.jpg" /></a>
 </p>
 </div>
@@ -243,10 +210,12 @@ research interest is <a href="./research.html">Number Theory related to Quantum 
 
 
 
-<div id="outline-container-orgefdf552" class="outline-2">
-<h2 id="orgefdf552">Distinctions</h2>
-<div class="outline-text-2" id="text-orgefdf552">
+<div id="outline-container-org304aa81" class="outline-2">
+<h2 id="org304aa81">Distinctions</h2>
+<div class="outline-text-2" id="text-org304aa81">
 <ul class="org-ul">
+<li><a href="https://www.kva.se/en/">Royal Swedish Academy of Sciences</a>, Member, 2023-.</li>
+<li><a href="https://www.fysiografen.se/sv/medaljer-priser/">Gårding prize</a>, 2021.</li>
 <li><a href="http://www.gustafssonsstiftelse.se/kva/index.html">Göran Gustafsson Prize</a>, 2010.</li>
 <li><a href="http://www.kva.se/sv/pressrum/pressmeddelanden-2008-2001/Sju-unga-forskare-far-toppjobb-av-akademien/">Royal Swedish Academy of Sciences Research Fellowship</a>, 2004-2009.</li>
 <li><a href="http://www.kva.se/sv/Priser/Ovriga-prisbeloningar/">Edlund Prize</a>, 2008.</li>
@@ -261,17 +230,17 @@ research interest is <a href="./research.html">Number Theory related to Quantum 
 
 
 
-<div id="outline-container-orgacf45ec" class="outline-2">
-<h2 id="orgacf45ec">Research</h2>
-<div class="outline-text-2" id="text-orgacf45ec">
+<div id="outline-container-orgbdc274c" class="outline-2">
+<h2 id="orgbdc274c">Research</h2>
+<div class="outline-text-2" id="text-orgbdc274c">
 
-<div class="figure">
+<div id="org752eeb0" class="figure">
 <p><a href="pic/torus_32045_64d_with_axis.png"><img src="pic/torus_32045_64d.png" alt="torus_32045_64d.png" /></a>
 </p>
 </div>
 
 
-<div class="figure">
+<div id="orge1ad794" class="figure">
 <p><a href="popular/popular.html"><img src="pic/scar2.jpg" alt="scar2.jpg" /></a>
 </p>
 </div>
@@ -289,17 +258,17 @@ research interest is <a href="./research.html">Number Theory related to Quantum 
 
 
 
-<div id="outline-container-org0bc4a86" class="outline-2">
-<h2 id="org0bc4a86">Teaching</h2>
-<div class="outline-text-2" id="text-org0bc4a86">
+<div id="outline-container-org4355168" class="outline-2">
+<h2 id="org4355168">Teaching</h2>
+<div class="outline-text-2" id="text-org4355168">
 <p>
 <a href="https://people.kth.se/~kurlberg/sf1633-ht20/">SF1633</a> &nbsp; (<a href="https://people.kth.se/~kurlberg/sf1633-ht19/">SF1633 ht19</a>) &nbsp;   &nbsp; &nbsp;  <a href="teaching.html">Old courses</a>.  &nbsp; &nbsp; &nbsp; Articles <a href="on-teaching.html">on teaching</a>.
 </p>
 </div>
 
-<div id="outline-container-orge5e12e5" class="outline-3">
-<h3 id="orge5e12e5">Why study math?</h3>
-<div class="outline-text-3" id="text-orge5e12e5">
+<div id="outline-container-org2313650" class="outline-3">
+<h3 id="org2313650">Why study math?</h3>
+<div class="outline-text-3" id="text-org2313650">
 <ul class="org-ul">
 <li>You can do some deep <a href="http://parrt.cs.usfca.edu/doc/matrix-calculus.pdf">stuff</a>.</li>
 
@@ -343,10 +312,18 @@ also increasingly integral to biology."
 
 
 
-<div id="outline-container-org09210a0" class="outline-2">
-<h2 id="org09210a0">Seminars/Workshops/Conferences</h2>
-<div class="outline-text-2" id="text-org09210a0">
+<div id="outline-container-org308ef65" class="outline-2">
+<h2 id="org308ef65">Seminars/Workshops/Conferences</h2>
+<div class="outline-text-2" id="text-org308ef65">
 <ul class="org-ul">
+<li><a href="http://www.mittag-leffler.se/langa-program/number-theory">Institut Mittag-Leffler semester on Number Theory</a> (spring 2024)</li>
+
+<li><a href="https://ncm29.math.aau.dk/">Number Theory Session, 29 NCM, Aalborg,</a> 2023</li>
+
+<li><a href="https://ncm28.math.aalto.fi/">Number Theory Session, 28 NCM, Aalto</a>, 2022</li>
+
+<li><a href="http://www.mittag-leffler.se/langa-program/number-theory">Institut Mittag-Leffler semester on Number Theory</a> (spring 2021)</li>
+
 <li><a href="https://maillist.sys.kth.se/mailman/listinfo/numbertheory">KTH/SU number theory mailing list</a></li>
 
 <li><a href="https://people.kth.se/~kurlberg/ntseminar/">KTH/SU Number theory seminar</a></li>
@@ -377,10 +354,11 @@ also increasingly integral to biology."
 
 
 
-<div id="outline-container-org2d7249d" class="outline-2">
-<h2 id="org2d7249d">Contact information</h2>
-<div class="outline-text-2" id="text-org2d7249d">
-<pre class="example">
+<div id="outline-container-orgcb833ef" class="outline-2">
+<h2 id="orgcb833ef">Contact information</h2>
+<div class="outline-text-2" id="text-orgcb833ef">
+<pre class="example" id="orgfad3c14">
+Office: room 3627, Mathematics, KTH
 Email: My last name at math.kth.se. (Spam problems.)
 Phone: +46 (0)8 790 6582
 Fax:   +46 (0)8 723 1788
@@ -401,11 +379,16 @@ Sweden
 
 
 
-<div id="outline-container-org056d884" class="outline-2">
-<h2 id="org056d884">Misc computer notes</h2>
-<div class="outline-text-2" id="text-org056d884">
+<div id="outline-container-org7ca1111" class="outline-2">
+<h2 id="org7ca1111">Misc computer notes</h2>
+<div class="outline-text-2" id="text-org7ca1111">
 <p>
-<a href="student_list.html">How to get a list of students</a> in your course (with email + pnr etc).
+Information about the department <a href="comp-resources.html">compute servers</a>.
+</p>
+
+<p>
+<a href="student_list.html">How to get a list of students</a> in your course (with email + pnr etc),
+and how to get names + pnr for "all" students that took an exam.
 </p>
 
 <p>
@@ -413,7 +396,7 @@ Hint and tips for <a href="https://people.kth.se/~kurlberg/room_booking.html">KT
 </p>
 
 <p>
-Latex <a href="https://people.kth.se/~kurlberg/kthbrev/">template</a> for official kth math letters.
+Latex <a href="https://people.kth.se/~kurlberg/kthbrev/">template</a> for KTH math letters.
 </p>
 
 <p>
@@ -428,29 +411,76 @@ Some other <a href="./kth-comp.html">KTH computer notes</a>.
 </div>
 </div>
 
-<div id="outline-container-orge61c96b" class="outline-2">
-<h2 id="orge61c96b">Some links</h2>
-<div class="outline-text-2" id="text-orge61c96b">
+<div id="outline-container-orgc9394f8" class="outline-2">
+<h2 id="orgc9394f8">Some links</h2>
+<div class="outline-text-2" id="text-orgc9394f8">
 <p>
 (Mostly to help google do the right.)
 </p>
 
 
 <p>
-<a href="http://lokal2.timeedit.se/kth/">KTH lokalbokning</a>
+<a href="https://cloud.timeedit.net/kth/web/public01/">lokalbokning</a>   (old <a href="http://lokal2.timeedit.se/kth/">KTH lokalbokning</a>)
 </p>
 
 <hr />
-
-
-
 </div>
+</div>
+
+<div id="outline-container-orgca4f160" class="outline-2">
+<h2 id="orgca4f160">Quotes</h2>
+<div class="outline-text-2" id="text-orgca4f160">
+<ul class="org-ul">
+<li>During the Jurassic Age the Old Ones met fresh adversity in the
+form of facts.</li>
+
+<li>In 1976, still back in the USSR, I got a very serious case of food
+poisoning from eating raw fish. While in the hospital, in the state
+of delirium, I suddenly realized that the ability to add numbers in
+parallel depends on the fact that addition is associative. (So,
+putting it simply, STL is the result of a bacterial infection.) In
+other words, I realized that a parallel reduction algorithm is
+associated with a semigroup structure type.</li>
+
+<li>In short, the mathematics of self-organizing lists suggests
+something radical: the big pile of papers on your desk, far from
+being a guilt-inducing fester of chaos, is actually one of the
+most well-designed and efficient structures available. What might
+appear to others to be an unorganized mess is, in fact, a
+self-organizing mess. Tossing things back on the top of the pile
+is the very best you can do, shy of knowing the future. You don’t
+need to organize that unsorted pile of paper.  
+You already have.</li>
+
+<li>In the days when Sussman was a novice, Minsky once came to him as
+he sat hacking at the PDP-6. "What are you doing?", asked
+Minsky. "I am training a randomly wired neural net to play
+Tic-tac-toe", Sussman replied. "Why is the net wired randomly?",
+asked Minsky. "I do not want it to have any preconceptions of how
+to play", Sussman said. Minsky then shut his eyes. "Why do you
+close your eyes?" Sussman asked his teacher. "So that the room will
+be empty." At that moment, Sussman was enlightened.</li>
+</ul>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37946015-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="date">Created: 2021-06-04 Fri 08:48</p>
-<p class="validation"></p>
+<p class="date">Created: 2025-03-17 Mon 01:14</p>
 </div>
 </body>
 </html>
