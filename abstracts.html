@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-17 Mon 01:14 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Abstracts</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '%MULTLINEWIDTH'
+      },
+      tags: '%TAGS',
+      tagSide: '%TAGSIDE',
+      tagIndent: '%TAGINDENT'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '2em'
+    },
+    output: {
+      font: '%FONT',
+      displayOverflow: '%OVERFLOW'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Abstracts</h1>
+<ul class="org-ul">
+<li><a href="eprints/squares1.pdf">The distribution of spacings between quadratic residues</a>: We study
+the distribution of spacings between squares modulo q, where q is
+square-free and highly composite, in the limit as the number of
+prime factors of q goes to infinity. We show that all correlation
+functions are Poissonian, which among other things, implies that
+the spacings between nearest neighbors, normalized to have unit
+mean, have an exponential distribution.</li>
+
+<li><a href="eprints/squares2.pdf">The distribution of spacings between quadratic residues, II</a>: We
+study the distribution of spacings between squares in Z/QZ as the
+number of prime divisors of Q tends to infinity.  In an ealier
+paper Kurlberg and Rudnick proved that the spacing distribution for
+square free Q is Poissonian, this paper extends the result to
+arbitrary Q.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><p>
+<a href="eprints/catmap.pdf">Hecke theory and equidistribution for the quantization of linear
+maps of the torus</a>: We study semi-classical limits of eigenfunctions
+of a quantized linear hyperbolic automorphism of the torus (``cat
+map'').  For some values of Planck's constant, the spectrum of the
+quantized map has large degeneracies.  Our first goal in this paper
+is to show that these degeneracies are coupled to the existence of
+quantum symmetries. There is a commutative group of unitary
+operators on the state-space which commute with the quantized map
+and therefore act on its eigenspaces.  We call these ``Hecke
+operators'', in analogy with the setting of the modular surface.
+</p>
+
+<p>
+We call the eigenstates of both the quantized map and of all the
+Hecke operators ``Hecke eigenfunctions''.  Our second goal is to
+study the semiclassical limit of the Hecke eigenfunctions. We will
+show that they become equidistributed with respect to Liouville
+measure, that is the expectation values of quantum observables in
+these eigenstates converge to the classical phase-space average of
+the observable.  
+</p></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><p>
+<a href="eprints/catmap2.pdf">On quantum ergodicity for linear maps of the torus</a>: We prove a
+strong version of quantum ergodicity for linear hyperbolic maps of
+the torus (``cat maps''). We show that there is a density one
+sequence of integers so that as N tends to infinity along this
+sequence, all eigenfunctions of the quantum propagator at inverse
+Planck constant N are uniformly distributed.  
+</p>
+
+<p>
+A key step in the argument is to show that for a hyperbolic matrix
+in the modular group, there is a density one sequence of integers N
+for which its order (or period) modulo N is somewhat larger than the
+square root of N.  
+</p></li>
+
+<li><a href="eprints/cohn.pdf">On a character sum problem of H. Cohn</a>: Let f be a complex valued
+function on a finite field F such that f(0) = 0, f(1) = 1,
+and |f(x)| = 1 for x &ne; 0. Cohn asked if it follows that f is a
+nontrivial multiplicative character provided that \(\sum_{x \in F}
+   f(x) \overline{f(x+h)} = -1\) for \(h \neq 0\).  We prove that this is
+the case for finite fields of prime cardinality under the
+assumption that the nonzero values of f are roots of unity.</li>
+
+<li><p>
+<a href="eprints/heckesup.pdf">Value distribution for eigenfunctions of desymmetrized quantum
+maps</a>: We study the value distribution and extreme values of
+eigenfunctions for the ``quantized cat map''.  This is the
+quantization of a hyperbolic linear map of the torus.  In a
+previous paper it was observed that there are quantum symmetries of
+the quantum map - a commutative group of unitary operators which
+commute with the map, which we called ``Hecke operators''.  The
+eigenspaces of the quantum map thus admit an orthonormal basis
+consisting of eigenfunctions of all the Hecke operators, which we
+call ``Hecke eigenfunctions''.  
+</p>
+
+<p>
+In this note we investigate suprema and value distribution of the
+Hecke eigenfunctions. For prime values of the inverse Planck
+constant N for which the map is diagonalizable modulo N (the
+``split primes'' for the map), we show that the Hecke
+eigenfunctions are uniformly bounded and their absolute values
+(amplitudes) are either constant or have a semi-circle value
+distribution as N tends to infinity. Moreover in the latter case
+different eigenfunctions become statistically independent.  We
+obtain these results via the Riemann hypothesis for curves over a
+finite field (Weil's theorem) and recent results of N. Katz on
+exponential sums.  For general N we obtain a nontrivial bound on
+the supremum norm of these Hecke eigenfunctions. 
+</p></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="eprints/artin.pdf">On the order of unimodular matrices modulo integers</a>: Assuming the
+Generalized Riemann Hypothesis, we prove the following: If b is an
+integer greater than one, then the multiplicative order of b modulo
+N is larger than \(N^{1-\epsilon}\) for all N in a density one subset
+of the integers.  If A is a hyperbolic unimodular matrix with
+integer coefficients, then the order of A modulo p is greater than
+\(p^{1-\epsilon}\) for all p in a density one subset of the primes.
+Moreover, the order of A modulo N is greater than \(N^{1-\epsilon}\)
+for all N in a density one subset of the integers.</li>
+
+<li><a href="eprints/catmap4.pdf">On the distribution of matrix elements for the quantum cat map</a>: For
+many classically chaotic systems it is believed that the quantum
+wave functions become uniformly distributed, that is the matrix
+elements of smooth observables tend to the phase space average of
+the observable.  In this paper we study the fluctuations of the
+matrix elements for the desymmetrized quantum cat map.  We present
+a conjecture for the distribution of the normalized matrix
+elements, namely that their distribution is that of a certain
+weighted sum of traces of independent matrices in SU(2).  This is
+in contrast to generic chaotic systems where the distribution is
+expected to be Gaussian.  We compute the second and fourth moment
+of the normalized matrix elements and obtain agreement with our
+conjecture.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="eprints/rsa.pdf">On the period of the linear congruential and power generators</a>: We
+consider the periods of the linear congruential and the power
+generators modulo n and, for fixed choices of initial parameters,
+give lower bounds that hold for ``most'' n when n ranges over three
+different sets: the set of primes, the set of products of two
+primes (of similar size), and the set of all integers.  For most n
+in these sets, the period is at least \(n^{1/2+\epsilon(n)}\) for any
+monotone function \(\epsilon(n)\) tending to
+zero as \(n\) tends to infinity.  Assuming the Generalized Riemann
+Hypothesis, for most n in these sets the period is greater than
+\(n^{1-\epsilon}\) for any \(\epsilon > 0\). Moreover, the period is
+unconditionally greater than \(n^{1/2+\delta}\), for some fixed
+\(\delta>0\) for a positive proportion of \(n\) in the above mentioned
+sets.  These bounds are related to lower bounds on the
+multiplicative order of an integer e modulo \(p-1\), modulo
+\(\lambda(pl)\), and modulo \(\lambda(m)\) where \(p,l\) range over the
+primes, \(m\) ranges over the integers, and where \(\lambda(n)\) is the
+order of the largest cyclic subgroup of \((Z/nZ)^\times\).</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="eprints/circle.pdf">Lattice points on circles and discrete velocity models for the
+Boltzmann equation</a>: The construction of discrete velocity models or
+numerical methods for the Boltzmann equation, may lead to the
+necessity of computing the collision operator as a sum over lattice
+points. The collision operator involves an integral over a sphere,
+which corresponds to the conservation of energy and momentum.  In
+dimension two there are difficulties even in proving the
+convergence of such an approximation since many circles contain
+very few lattice points, and some circles contain many badly
+distributed lattice points.  However, by showing that lattice
+points on most circles are equidistributed we find that the
+collision operator can indeed be approximated as a sum over lattice
+points in the two-dimensional case.  For higher dimensions, this
+result has already been obtained by A. Bobylev et. al. (SIAM
+J. Numerical Analysis 34 no 5 p. 1865-1883 (1997) )</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="eprints/crt.pdf">Poisson statistics via the Chinese remainder theorem</a>: We consider
+the distribution of spacings between consecutive elements in
+subsets of \(Z/qZ\) where \(q\) is highly composite and the subsets are
+defined via the Chinese remainder theorem.  We give a sufficient
+criterion for the spacing distribution to be Poissonian as the
+number of prime factors of q tends to infinity, and as an
+application we show that the value set of a generic polynomial
+modulo q have Poisson spacings.  We also study the spacings of
+subsets of \(Z/q_1 q_2Z\) that are created via the Chinese remainder
+theorem from subsets of \(Z/q_1Z\) and \(Z/q_2Z\) (for \(q_1,q_2\) coprime),
+and give criteria for when the spacings modulo \(q_1q_2\) are Poisson.
+We also give some examples when the spacings modulo \(q_1q_2\) are not
+Poisson, even though the spacings modulo \(q_1\) and modulo \(q_2\) are
+both Poisson.</li>
+
+<li><a href="eprints/crt2.pdf">Poisson spacing statistics for value sets of polynomials</a>: If f is a
+polynomial with integer coefficients and q is an integer, we may
+regard f as a map from Z/qZ to Z/qZ. We show that the distribution
+of the (normalized) spacings between consecutive elements in the
+image of these maps becomes Poissonian as q tends to infinity along
+any sequence of square free integers such that the mean spacing
+modulo q tends to infinity.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><p>
+<a href="eprints/catmap5.pdf">Bounds on supremum norms for Hecke eigenfunctions of quantized cat
+maps</a>: We study extreme values of desymmetrized eigenfunctions (so
+called Hecke eigenfunctions) for the quantized cat map, a
+quantization of a hyperbolic linear map of the torus.  In a
+previous paper it was shown that for prime values of the inverse
+Planck's constant N=1/h, such that the map is diagonalizable (but
+not upper triangular) modulo N, the Hecke eigenfunctions are
+uniformly bounded.  The purpose of this paper is to show that the
+same holds for any prime N provided that the map is not upper
+triangular modulo N.
+</p>
+
+<p>
+We also find that the supremum norms of Hecke eigenfunctions are
+O<sub>epsilon</sub> (N<sup>epsilon</sup>) for all epsilon&gt;0 in the case of N square
+free.
+</p></li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="eprints/catmap6.pdf">Matrix elements for the quantum cat map: Fluctuations in short
+windows</a>: We study fluctuations of the matrix coefficients for the
+quantized cat map. We consider the sum of matrix coefficients
+corresponding to eigenstates whose eigenphases lie in a randomly
+chosen window, assuming that the length of the window shrinks with
+Planck's constant.  We show that if the length of the window is
+smaller than the square root of Planck's constant, but larger than
+the separation between distinct eigenphases, then the variance of
+this sum is proportional to the length of the window, with a
+proportionality constant which coincides with the variance of the
+individual matrix elements corresponding to Hecke eigenfunctions.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="eprints/short_expsum.pdf">Bounds on exponential sums over small multiplicative subgroups</a>: We
+show that there is significant cancellation in certain exponential
+sums over small multiplicative subgroups of finite fields, giving
+an exposition of the arguments by Bourgain and Chang.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li><a href="eprints/prodres.pdf">Products in Residue Classes</a>: We consider a problem of P. Erdos,
+A. M. Odlyzko and A. Sarkozy about the representation of residue
+classes modulo m by products of two not too large primes. While it
+seems that even the Extended Riemann Hypothesis is not powerful
+enough to achieve the expected results, here we obtain some
+unconditional results ``on average'' over moduli m and residue
+classes modulo m and somewhat stronger results when the average is
+restricted to prime moduli m = p. We also consider the analogous
+question wherein the primes are replaced by easier sequences so,
+quite naturally, we obtain much stronger results.</li>
+</ul>
+
+
+
+<ul class="org-ul">
+<li><a href="eprints/dynamical-mordell-lang.pdf">The Dynamical Mordell-Lang Conjecture</a>: We prove a special case of a
+dynamical analogue of the classical Mordell-Lang conjecture. In
+particular, let phi be a rational function with no superattracting
+periodic points other than exceptional points.  If the coefficients
+of phi are algebraic, we show that the orbit of a point outside the
+union of proper preperiodic subvarieties of (P<sup>1</sup>)<sup>g</sup> has only finite
+intersection with any curve contained in (P<sup>1</sup>)<sup>g</sup>.  Our proof uses
+results from p-adic dynamics together with an integrality argument.</li>
+</ul>
+
+
+<ul class="org-ul">
+<li><a href="eprints/dynamical-gap.pdf">A gap principle for dynamics</a>: Let \(f_1,...,f_g \in C(z)\) be
+rational functions, let \(\Phi=(f_1,...,f_g)\) denote their
+coordinatewise action on \((P^1)^g\), let \(V \subset (P^1)^g\) be a
+proper subvariety, and let \(P=(x_1,... ,x_g) \in (P^1)^g(C)\) be a
+nonpreperiodic point for \(\Phi\). We show that if \(V\) does not
+contain any periodic subvarieties of positive dimension, then the
+set of \(n\) such that \(\Phi^n(P) \in V(C)\) must be very sparse. In
+particular, for any \(k\) and any sufficiently large \(N\), the number
+of \(n \leq N\) such that \(\Phi^n(P) \in V(C)\) is less than \(\log^k
+   N\), where \(log^k\) denotes the k-th iterate of the log
+function. This can be interpreted as an analog of the gap principle
+of Davenport-Roth and Mumford.</li>
+
+<li><a href="eprints/gaussian-ap.pdf">Gaussian point count statistics for families of curves over a fixed
+finite field</a>: We produce a collection of families of curves, whose
+point count statistics over \(F_p\) becomes Gaussian for \(p\) 
+<span class="underline">fixed</span>.  In particular, the <span class="underline">average</span> number of $F<sub>p</sub>$-points on
+curves in these families tends to infinity.</li>
+</ul>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2025-03-17 Mon 01:14</p>
+</div>
+</body>
+</html>
