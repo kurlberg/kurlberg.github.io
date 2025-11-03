@@ -1,0 +1,185 @@
+% for big gustafsson 2007 app, popular part
+%
+\documentclass[10pt,oneside]{article}
+%\documentclass[12pt,oneside]{amsart}
+\usepackage[latin1]{inputenc}
+
+\usepackage{floatflt}
+\usepackage{graphicx}
+% for latex2html
+\usepackage{html}
+
+\setlength{\oddsidemargin}{0.5in}
+\setlength{\evensidemargin}{0.5in}
+\setlength{\topmargin}{0in}
+%\setlength{\textwidth}{5.5in}
+\setlength{\textwidth}{6in}
+\addtolength{\hoffset}{-.25in}
+
+%\setlength{\textheight}{8.5in}
+\setlength{\textheight}{9.5in}
+\addtolength{\voffset}{-.5in}
+
+
+
+%  \setlength{\oddsidemargin}{0.5in}
+%  \setlength{\evensidemargin}{0.5in}
+%  \setlength{\topmargin}{0in}
+%  %%\setlength{\textwidth}{5.5in}
+%  %\setlength{\textwidth}{6in}
+%  %\addtolength{\hoffset}{-.25in}
+%  
+%  %\setlength{\textheight}{8.5in}
+%  \setlength{\textheight}{9.5in}
+%  \addtolength{\voffset}{-.5in}
+%  
+%  
+%  %\addtolength{\textheight}{.1in}
+%  %\addtolength{\voffset}{-.06in}
+%  
+%  
+%  
+%  %\setlength{\headheight}{0.0in}
+%  %\setlength{\headsep}{0.0in}
+
+
+\usepackage{floatflt}
+
+
+\newtheorem{remark}{Remark}[section]
+\newtheorem{thm}{Theorem}%[section]
+\newcommand{\Z}{{\mathbf Z}}
+\newcommand{\R}{{\mathbf R}}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+
+\begin{document}
+\title{Populärvetenskaplig beskrivning}
+
+{\hfill P\"ar Kurlberg, Matematik}
+\vspace{.3in}
+
+%\maketitle
+
+
+Min forskning är fokuserad på talteori med kopplingar till kvantkaos ---
+ett område vars centrala frågeställning är att förklara sambandet
+mellan klassiskt kaos och kvantmekanik.  I ett kaotiskt system blir
+små skillnader i begynnelsevillkor snabbt förstärkta, vilket
+omöjliggör förutsägelser långt fram i tiden --- ett slående exempel är
+att vi ej kan utesluta möjligheten att jorden slungas ut ur
+solsystemet långt innan solen slocknar.  Å andra sidan, i
+kvantmekanikens våglika värld blir partikelbanor ``utsmetade'' p.g.a.
+Heisenbergs osäkerhetsrelation, och detta verkar utesluta ett 
+fundamentalt kännetecken för kaos, nämligen den mycket komplicerade
+bilden av tätt sammanflätade, men likväl divergenta banor.
+%
+En fundamental, och kanske något filosofisk fråga är således: hur kan
+makroskopiskt kaos ``skapas'' i ett universum som i grund och botten
+är kvantmekanisk?  Denna fråga har debatterats livligt, men  från
+perspektivet av matematisk fysik är följande konkretisering central:
+på vilket vis  uttrycker  sig klassiskt kaos i form av egenskaper hos
+det motsvarande kvantmekaniska systemet?  Denna frågeställning ger
+ofta upphov till problem som kan attackeras m.h.a.  talteoretiska metoder,
+och det är inte ovanligt att dessa frågor i sig visar sig mycket
+intressanta ur en ``klassisk'' talteoretisk synvinkel.
+
+Ett exempel på ett kaotiskt system är en punktformad boll som rör sig
+friktionsfritt på ett stadiumformat billiardbord.  För nästan alla val
+av startpunkt och riktning kommer bollen, efter tillräckligt lång tid,
+att "ha närmat sig alla punkter från alla håll", s.k. ergodisk
+rörelse.  Notera att det finns många slutna banor, t.o.m.
+kontinuerliga familjer.  (Notera även att rektangulär biljard ej är
+ergodisk --- lutningen hos en godtycklig bana är, upp till tecken, konstant.)
+
+
+\begin{figure}[!h]
+  \centering
+
+  \includegraphics[width=4cm]{popular001}
+  \includegraphics[width=4cm]{popular002}
+  \includegraphics[width=4cm]{popular003}
+%  \caption{Eigenfunctions for the stadium billiard.}
+%   \begin{center}
+%     \parbox[t]{4.5in}{ Stadiumbilliarden är ergodisk - en ``typisk''
+%       bana närmar sig alla punkter från nästan alla riktingar.  Notera
+%       att det finns många slutna banor, t.o.m. kontinuerliga familjer.
+%       Rektangulär biljard är ej ergodisk - lutningen hos en bana är, 
+%       upp till tecken,    konstant.  }
+%   \end{center}
+%   \label{fig_3}
+% \vspace{-0.3cm}
+\end{figure}
+
+
+En kvantmekanisk motsvarighet till ergodicitet är approximativt
+likformig sannolikhetsfördelning för kvantpartiklar med bestämd energi
+(stationära tillstånd, dvs egenfunktioner till den kvantiserade
+Hamiltonianen).  Dock, vid numeriska experiment har man funnit
+"kvantärr" --- vissa egenfunktioner verkar koncentrera sig längs slutna
+banor.
+
+
+%\rmk{\bf Turn figures back on!!!!}
+\begin{figure}[htbp]
+%\begin{figure}[!h]
+  \centering
+  \includegraphics[width=4.5cm, angle=90]{popular004}
+  \includegraphics[width=4.5cm, angle=90]{popular005}
+  \includegraphics[width=4.5cm, angle=90]{popular006}
+  \includegraphics[width=4.5cm, angle=90]{popular007}
+  \includegraphics[width=4.5cm, angle=90]{popular008}
+%  \caption{Eigenfunctions for the stadium billiard.}
+%  \begin{center}
+%\caption{
+\parbox[t]{4.5in}{
+%Figure 3. 
+Sannolikhetsfördelning för några stationära tillstånd - mörk färg
+svarar mot liten sannolikhet, ljus mot stor, och rött indikerar
+maximal sannolikhet.  De fyra första bilderna indikerar
+``ärrbildning'', den sista approximativt likformig fördelning.}
+
+%}
+%  \end{center}
+%  \label{fig_3}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+Finns dessa ärr vid godtyckligt stora energier?  För allmänna kaotiska
+system verkar frågan mycket svår att besvara, men i vissa fall kan
+%talteoretiska metoder användas med stor framgång --- för tidsdiskreta
+talteoretiska metoder användas framgångsrikt --- för tidsdiskreta
+torusavbildningar, s.k. "CAT maps", har vi uteslutit ärrbildildning
+för desymmetriserade egenfunktioner, ett av de första rigorösa
+resultaten inom området.  Vi har även studerat egenfunktionernas
+värdefördelning och funnit att den ej är konsistent med vad som
+förväntas för generiska kaotiska system, nämligen Gaussisk
+värdefördelning.
+
+
+{\bf Tillämpningar:} På lite längre sikt kan forskningsresultat inom
+kvantkaos få tillämpning inom mikroelektroniken och torde därför 
+vara av intresse för dator och kommunikationsindustrin.
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
