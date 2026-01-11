@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-01-11 Sun 11:30 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="author" content="Pär Kurlberg" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org4f00fff">1. Vecka 3</a>
+<ul>
+<li><a href="#org8177fff">1.1. Tis 13 jan	15:00 - 17:00	FÖ1 E2</a></li>
+<li><a href="#org94a8d2c">1.2. Tors 15 jan	10:00 - 12:00	FÖ2 E2</a></li>
+<li><a href="#org117e53c">1.3. Fre 16 jan	13:00 - 15:00	ÖV1 E51</a></li>
+</ul>
+</li>
+<li><a href="#org7badb50">2. Vecka 4</a>
+<ul>
+<li><a href="#org33b4f25">2.1. Tis 20 jan	08:00 - 10:00	FÖ3 E2</a></li>
+<li><a href="#org63d1d82">2.2. Ons 21 jan	10:00 - 12:00	ÖV2 E51</a></li>
+</ul>
+</li>
+<li><a href="#orgdaf7331">3. Vecka 5</a>
+<ul>
+<li><a href="#orgcdf8d81">3.1. Mån 26 jan	08:00 - 10:00	FÖ4 E2</a></li>
+<li><a href="#org1e715f7">3.2. Tis 27 jan	13:00 - 15:00	FÖ5 E2</a></li>
+<li><a href="#org2e41ea8">3.3. Fre 30 jan	13:00 - 15:00	ÖV3 E51</a></li>
+</ul>
+</li>
+<li><a href="#orgb230ca3">4. Vecka 6</a>
+<ul>
+<li><a href="#orgbbc0d73">4.1. Mån 2 feb	08:00 - 10:00	FÖ6 E2</a></li>
+<li><a href="#orgcbb16c6">4.2. Tis 3 feb	10:00 - 12:00	ÖV4 E51</a></li>
+</ul>
+</li>
+<li><a href="#orgb118ed2">5. Vecka 7</a>
+<ul>
+<li><a href="#orgb57fb43">5.1. Mån 9 feb	10:00 - 12:00	FÖ7 E2</a></li>
+<li><a href="#org3f412ce">5.2. Ons 11 feb	15:00 - 17:00	FÖ8 E2</a></li>
+<li><a href="#orgd7c6d29">5.3. Tors 12 feb	10:00 - 12:00	ÖV5 E51</a></li>
+</ul>
+</li>
+<li><a href="#org4502994">6. Vecka 8</a>
+<ul>
+<li><a href="#orge3a231b">6.1. Tis 17 feb	13:00 - 15:00	FÖ9 E2</a></li>
+<li><a href="#orgbbe170d">6.2. Tors 19 feb	15:00 - 17:00	ÖV6 V33</a></li>
+<li><a href="#org5640664">6.3. Fre 20 feb	13:00 - 15:00	ÖV7 E51</a></li>
+</ul>
+</li>
+<li><a href="#orgbffcbaa">7. Vecka 9</a>
+<ul>
+<li><a href="#orgd5628c1">7.1. Mån 23 feb	10:00 - 12:00	FÖ10 E2</a></li>
+</ul>
+</li>
+<li><a href="#org246de04">8. Vecka 12</a>
+<ul>
+<li><a href="#org47449bc">8.1. Mån 16 mar	13:00 - 15:00	FÖ11 E3</a></li>
+<li><a href="#org4a3346c">8.2. Tis 17 mar	15:00 - 17:00	FÖ12 E2</a></li>
+<li><a href="#org34a1468">8.3. Ons 18 mar	08:00 - 10:00	ÖV8 E51</a></li>
+<li><a href="#orgbdfaa40">8.4. Fre 20 mar	08:00 - 10:00	ÖV9 E51</a></li>
+</ul>
+</li>
+<li><a href="#orga2cb573">9. Vecka 13</a>
+<ul>
+<li><a href="#org46a1ddd">9.1. Mån 23 mar	10:00 - 12:00	FÖ13 E2</a></li>
+<li><a href="#org6f85ac3">9.2. Tors 26 mar	10:00 - 12:00	FÖ14 E2</a></li>
+<li><a href="#org569467f">9.3. Tors 26 mar	13:00 - 15:00	ÖV10 V35</a></li>
+</ul>
+</li>
+<li><a href="#orge84805b">10. Vecka 14</a>
+<ul>
+<li><a href="#org25c65f3">10.1. Mån 30 mar	10:00 - 12:00	FÖ15 E2</a></li>
+<li><a href="#orgbaef4d1">10.2. Ons 1 apr	10:00 - 12:00	ÖV11 E51</a></li>
+<li><a href="#orga931c66">10.3. Ons 1 apr	13:00 - 15:00	ÖV12 E51</a></li>
+</ul>
+</li>
+<li><a href="#org6a88ab9">11. Vecka 15</a></li>
+<li><a href="#orgbb9452e">12. Vecka 16</a>
+<ul>
+<li><a href="#org22a6548">12.1. Tis 14 apr	15:00 - 17:00	FÖ16 E2</a></li>
+<li><a href="#orgc424e3c">12.2. Tors 16 apr	08:00 - 10:00	FÖ17 E2</a></li>
+<li><a href="#org45b3a3f">12.3. Tors 16 apr	13:00 - 15:00	ÖV13 Q21</a></li>
+</ul>
+</li>
+<li><a href="#orgacba8c8">13. Vecka 17</a>
+<ul>
+<li><a href="#org4a19796">13.1. Tis 21 apr	13:00 - 15:00	ÖV14 E51</a></li>
+<li><a href="#org3b43362">13.2. Ons 22 apr	10:00 - 12:00	FÖ18 E2</a></li>
+<li><a href="#orgf2bad5e">13.3. Tors 23 apr	13:00 - 15:00	FÖ19 E2</a></li>
+</ul>
+</li>
+<li><a href="#org1a105b5">14. Vecka 18</a>
+<ul>
+<li><a href="#orge7cd84f">14.1. Mån 27 apr	10:00 - 12:00	ÖV15 E51</a></li>
+<li><a href="#orgfadaa64">14.2. Tis 28 apr	15:00 - 17:00	FÖ20 E2</a></li>
+<li><a href="#orgde896e5">14.3. Ons 29 apr	08:00 - 10:00	ÖV16 E51</a></li>
+</ul>
+</li>
+<li><a href="#orge9b2622">15. Vecka 19</a>
+<ul>
+<li><a href="#orgca1a195">15.1. Mån 4 maj	13:00 - 15:00	FÖ21 E2</a></li>
+</ul>
+</li>
+<li><a href="#orga54dbe4">16. Vecka 21</a>
+<ul>
+<li><a href="#org0d73c25">16.1. Mån 18 maj	15:00 - 17:00	FÖ22 E2</a></li>
+</ul>
+</li>
+<li><a href="#org0ecb22b">17. Vecka 22</a>
+<ul>
+<li><a href="#org8206398">17.1. Fre 29 maj	08:00 - 13:00	TE U21	Tentamen</a></li>
+</ul>
+</li>
+<li><a href="#org9d023f0">18. Vecka 23</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4f00fff" class="outline-2">
+<h2 id="org4f00fff"><span class="section-number-2">1.</span> Vecka 3</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org8177fff" class="outline-3">
+<h3 id="org8177fff"><span class="section-number-3">1.1.</span> Tis 13 jan	15:00 - 17:00	FÖ1 E2</h3>
+</div>
+<div id="outline-container-org94a8d2c" class="outline-3">
+<h3 id="org94a8d2c"><span class="section-number-3">1.2.</span> Tors 15 jan	10:00 - 12:00	FÖ2 E2</h3>
+</div>
+<div id="outline-container-org117e53c" class="outline-3">
+<h3 id="org117e53c"><span class="section-number-3">1.3.</span> Fre 16 jan	13:00 - 15:00	ÖV1 E51</h3>
+</div>
+</div>
+<div id="outline-container-org7badb50" class="outline-2">
+<h2 id="org7badb50"><span class="section-number-2">2.</span> Vecka 4</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org33b4f25" class="outline-3">
+<h3 id="org33b4f25"><span class="section-number-3">2.1.</span> Tis 20 jan	08:00 - 10:00	FÖ3 E2</h3>
+</div>
+<div id="outline-container-org63d1d82" class="outline-3">
+<h3 id="org63d1d82"><span class="section-number-3">2.2.</span> Ons 21 jan	10:00 - 12:00	ÖV2 E51</h3>
+</div>
+</div>
+<div id="outline-container-orgdaf7331" class="outline-2">
+<h2 id="orgdaf7331"><span class="section-number-2">3.</span> Vecka 5</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgcdf8d81" class="outline-3">
+<h3 id="orgcdf8d81"><span class="section-number-3">3.1.</span> Mån 26 jan	08:00 - 10:00	FÖ4 E2</h3>
+</div>
+<div id="outline-container-org1e715f7" class="outline-3">
+<h3 id="org1e715f7"><span class="section-number-3">3.2.</span> Tis 27 jan	13:00 - 15:00	FÖ5 E2</h3>
+</div>
+<div id="outline-container-org2e41ea8" class="outline-3">
+<h3 id="org2e41ea8"><span class="section-number-3">3.3.</span> Fre 30 jan	13:00 - 15:00	ÖV3 E51</h3>
+</div>
+</div>
+<div id="outline-container-orgb230ca3" class="outline-2">
+<h2 id="orgb230ca3"><span class="section-number-2">4.</span> Vecka 6</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orgbbc0d73" class="outline-3">
+<h3 id="orgbbc0d73"><span class="section-number-3">4.1.</span> Mån 2 feb	08:00 - 10:00	FÖ6 E2</h3>
+</div>
+<div id="outline-container-orgcbb16c6" class="outline-3">
+<h3 id="orgcbb16c6"><span class="section-number-3">4.2.</span> Tis 3 feb	10:00 - 12:00	ÖV4 E51</h3>
+</div>
+</div>
+<div id="outline-container-orgb118ed2" class="outline-2">
+<h2 id="orgb118ed2"><span class="section-number-2">5.</span> Vecka 7</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgb57fb43" class="outline-3">
+<h3 id="orgb57fb43"><span class="section-number-3">5.1.</span> Mån 9 feb	10:00 - 12:00	FÖ7 E2</h3>
+</div>
+<div id="outline-container-org3f412ce" class="outline-3">
+<h3 id="org3f412ce"><span class="section-number-3">5.2.</span> Ons 11 feb	15:00 - 17:00	FÖ8 E2</h3>
+</div>
+<div id="outline-container-orgd7c6d29" class="outline-3">
+<h3 id="orgd7c6d29"><span class="section-number-3">5.3.</span> Tors 12 feb	10:00 - 12:00	ÖV5 E51</h3>
+</div>
+</div>
+<div id="outline-container-org4502994" class="outline-2">
+<h2 id="org4502994"><span class="section-number-2">6.</span> Vecka 8</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orge3a231b" class="outline-3">
+<h3 id="orge3a231b"><span class="section-number-3">6.1.</span> Tis 17 feb	13:00 - 15:00	FÖ9 E2</h3>
+</div>
+<div id="outline-container-orgbbe170d" class="outline-3">
+<h3 id="orgbbe170d"><span class="section-number-3">6.2.</span> Tors 19 feb	15:00 - 17:00	ÖV6 V33</h3>
+</div>
+<div id="outline-container-org5640664" class="outline-3">
+<h3 id="org5640664"><span class="section-number-3">6.3.</span> Fre 20 feb	13:00 - 15:00	ÖV7 E51</h3>
+</div>
+</div>
+<div id="outline-container-orgbffcbaa" class="outline-2">
+<h2 id="orgbffcbaa"><span class="section-number-2">7.</span> Vecka 9</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgd5628c1" class="outline-3">
+<h3 id="orgd5628c1"><span class="section-number-3">7.1.</span> Mån 23 feb	10:00 - 12:00	FÖ10 E2</h3>
+</div>
+</div>
+<div id="outline-container-org246de04" class="outline-2">
+<h2 id="org246de04"><span class="section-number-2">8.</span> Vecka 12</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-org47449bc" class="outline-3">
+<h3 id="org47449bc"><span class="section-number-3">8.1.</span> Mån 16 mar	13:00 - 15:00	FÖ11 E3</h3>
+</div>
+<div id="outline-container-org4a3346c" class="outline-3">
+<h3 id="org4a3346c"><span class="section-number-3">8.2.</span> Tis 17 mar	15:00 - 17:00	FÖ12 E2</h3>
+</div>
+<div id="outline-container-org34a1468" class="outline-3">
+<h3 id="org34a1468"><span class="section-number-3">8.3.</span> Ons 18 mar	08:00 - 10:00	ÖV8 E51</h3>
+</div>
+<div id="outline-container-orgbdfaa40" class="outline-3">
+<h3 id="orgbdfaa40"><span class="section-number-3">8.4.</span> Fre 20 mar	08:00 - 10:00	ÖV9 E51</h3>
+</div>
+</div>
+<div id="outline-container-orga2cb573" class="outline-2">
+<h2 id="orga2cb573"><span class="section-number-2">9.</span> Vecka 13</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org46a1ddd" class="outline-3">
+<h3 id="org46a1ddd"><span class="section-number-3">9.1.</span> Mån 23 mar	10:00 - 12:00	FÖ13 E2</h3>
+</div>
+<div id="outline-container-org6f85ac3" class="outline-3">
+<h3 id="org6f85ac3"><span class="section-number-3">9.2.</span> Tors 26 mar	10:00 - 12:00	FÖ14 E2</h3>
+</div>
+<div id="outline-container-org569467f" class="outline-3">
+<h3 id="org569467f"><span class="section-number-3">9.3.</span> Tors 26 mar	13:00 - 15:00	ÖV10 V35</h3>
+</div>
+</div>
+<div id="outline-container-orge84805b" class="outline-2">
+<h2 id="orge84805b"><span class="section-number-2">10.</span> Vecka 14</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org25c65f3" class="outline-3">
+<h3 id="org25c65f3"><span class="section-number-3">10.1.</span> Mån 30 mar	10:00 - 12:00	FÖ15 E2</h3>
+</div>
+<div id="outline-container-orgbaef4d1" class="outline-3">
+<h3 id="orgbaef4d1"><span class="section-number-3">10.2.</span> Ons 1 apr	10:00 - 12:00	ÖV11 E51</h3>
+</div>
+<div id="outline-container-orga931c66" class="outline-3">
+<h3 id="orga931c66"><span class="section-number-3">10.3.</span> Ons 1 apr	13:00 - 15:00	ÖV12 E51</h3>
+</div>
+</div>
+<div id="outline-container-org6a88ab9" class="outline-2">
+<h2 id="org6a88ab9"><span class="section-number-2">11.</span> Vecka 15</h2>
+</div>
+<div id="outline-container-orgbb9452e" class="outline-2">
+<h2 id="orgbb9452e"><span class="section-number-2">12.</span> Vecka 16</h2>
+<div class="outline-text-2" id="text-12">
+</div>
+<div id="outline-container-org22a6548" class="outline-3">
+<h3 id="org22a6548"><span class="section-number-3">12.1.</span> Tis 14 apr	15:00 - 17:00	FÖ16 E2</h3>
+</div>
+<div id="outline-container-orgc424e3c" class="outline-3">
+<h3 id="orgc424e3c"><span class="section-number-3">12.2.</span> Tors 16 apr	08:00 - 10:00	FÖ17 E2</h3>
+</div>
+<div id="outline-container-org45b3a3f" class="outline-3">
+<h3 id="org45b3a3f"><span class="section-number-3">12.3.</span> Tors 16 apr	13:00 - 15:00	ÖV13 Q21</h3>
+</div>
+</div>
+<div id="outline-container-orgacba8c8" class="outline-2">
+<h2 id="orgacba8c8"><span class="section-number-2">13.</span> Vecka 17</h2>
+<div class="outline-text-2" id="text-13">
+</div>
+<div id="outline-container-org4a19796" class="outline-3">
+<h3 id="org4a19796"><span class="section-number-3">13.1.</span> Tis 21 apr	13:00 - 15:00	ÖV14 E51</h3>
+</div>
+<div id="outline-container-org3b43362" class="outline-3">
+<h3 id="org3b43362"><span class="section-number-3">13.2.</span> Ons 22 apr	10:00 - 12:00	FÖ18 E2</h3>
+</div>
+<div id="outline-container-orgf2bad5e" class="outline-3">
+<h3 id="orgf2bad5e"><span class="section-number-3">13.3.</span> Tors 23 apr	13:00 - 15:00	FÖ19 E2</h3>
+</div>
+</div>
+<div id="outline-container-org1a105b5" class="outline-2">
+<h2 id="org1a105b5"><span class="section-number-2">14.</span> Vecka 18</h2>
+<div class="outline-text-2" id="text-14">
+</div>
+<div id="outline-container-orge7cd84f" class="outline-3">
+<h3 id="orge7cd84f"><span class="section-number-3">14.1.</span> Mån 27 apr	10:00 - 12:00	ÖV15 E51</h3>
+</div>
+<div id="outline-container-orgfadaa64" class="outline-3">
+<h3 id="orgfadaa64"><span class="section-number-3">14.2.</span> Tis 28 apr	15:00 - 17:00	FÖ20 E2</h3>
+</div>
+<div id="outline-container-orgde896e5" class="outline-3">
+<h3 id="orgde896e5"><span class="section-number-3">14.3.</span> Ons 29 apr	08:00 - 10:00	ÖV16 E51</h3>
+</div>
+</div>
+<div id="outline-container-orge9b2622" class="outline-2">
+<h2 id="orge9b2622"><span class="section-number-2">15.</span> Vecka 19</h2>
+<div class="outline-text-2" id="text-15">
+</div>
+<div id="outline-container-orgca1a195" class="outline-3">
+<h3 id="orgca1a195"><span class="section-number-3">15.1.</span> Mån 4 maj	13:00 - 15:00	FÖ21 E2</h3>
+</div>
+</div>
+<div id="outline-container-orga54dbe4" class="outline-2">
+<h2 id="orga54dbe4"><span class="section-number-2">16.</span> Vecka 21</h2>
+<div class="outline-text-2" id="text-16">
+</div>
+<div id="outline-container-org0d73c25" class="outline-3">
+<h3 id="org0d73c25"><span class="section-number-3">16.1.</span> Mån 18 maj	15:00 - 17:00	FÖ22 E2</h3>
+</div>
+</div>
+<div id="outline-container-org0ecb22b" class="outline-2">
+<h2 id="org0ecb22b"><span class="section-number-2">17.</span> Vecka 22</h2>
+<div class="outline-text-2" id="text-17">
+</div>
+<div id="outline-container-org8206398" class="outline-3">
+<h3 id="org8206398"><span class="section-number-3">17.1.</span> Fre 29 maj	08:00 - 13:00	TE U21	Tentamen</h3>
+</div>
+</div>
+<div id="outline-container-org9d023f0" class="outline-2">
+<h2 id="org9d023f0"><span class="section-number-2">18.</span> Vecka 23</h2>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Pär Kurlberg</p>
+<p class="date">Created: 2026-01-11 Sun 11:30</p>
+</div>
+</body>
+</html>
