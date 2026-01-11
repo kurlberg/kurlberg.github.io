@@ -1,0 +1,678 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-01-11 Sun 11:11 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+
+<div id="outline-container-org8da49a2" class="outline-2">
+<h2 id="org8da49a2">Föreläsningar</h2>
+<div class="outline-text-2" id="text-org8da49a2">
+</div>
+<div id="outline-container-org10c370b" class="outline-3">
+<h3 id="org10c370b">F1.</h3>
+<div class="outline-text-3" id="text-org10c370b">
+<ul class="org-ul">
+<li>Introduktion</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfb755e1" class="outline-3">
+<h3 id="orgfb755e1">F2. Kap 1.</h3>
+<div class="outline-text-3" id="text-orgfb755e1">
+<ul class="org-ul">
+<li>Komplex aritmetik. Polär form. Mängder av komplexa tal. Topologi.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2cac57f" class="outline-3">
+<h3 id="org2cac57f">F3. Kap 2.</h3>
+<div class="outline-text-3" id="text-org2cac57f">
+<ul class="org-ul">
+<li>Komplexa funktioner, gränsvärden och derivator. Holomorfa
+funktioner. Cauchy-Riemanns ekvationer.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org826f5d4" class="outline-3">
+<h3 id="org826f5d4">F4. Kap 2-3.</h3>
+<div class="outline-text-3" id="text-org826f5d4">
+<ul class="org-ul">
+<li>Mer om holomorfa funktioner. Möbiusavbildningar.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7e65012" class="outline-3">
+<h3 id="org7e65012">F5. Kap 3.</h3>
+<div class="outline-text-3" id="text-org7e65012">
+<ul class="org-ul">
+<li>Fler exempel på funktioner (exp,log,sin,cos).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org98527b7" class="outline-3">
+<h3 id="org98527b7">F6. Kap. 4.1-4.2.</h3>
+<div class="outline-text-3" id="text-org98527b7">
+<ul class="org-ul">
+<li>Komplex integration. Intro.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org809d937" class="outline-3">
+<h3 id="org809d937">F7. Kap 4.3-4.</h3>
+<div class="outline-text-3" id="text-org809d937">
+<ul class="org-ul">
+<li>Mer komplex integration. Cauchys sats.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3706722" class="outline-3">
+<h3 id="org3706722">F8. Kap 4.4-5.</h3>
+<div class="outline-text-3" id="text-org3706722">
+<ul class="org-ul">
+<li>Mer komplex integration. Cauchys formel samt tillämpningar.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3e4128c" class="outline-3">
+<h3 id="org3e4128c">F9. Kap 5-6.</h3>
+<div class="outline-text-3" id="text-org3e4128c">
+<ul class="org-ul">
+<li>Kap 5, forts. Kap 6 (tom sats 6.6.)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6519e4f" class="outline-3">
+<h3 id="org6519e4f">F10. Kap 6.</h3>
+<div class="outline-text-3" id="text-org6519e4f">
+<ul class="org-ul">
+<li>Kap 6, forts.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc8e57cf" class="outline-3">
+<h3 id="orgc8e57cf">F11. Kap 7.</h3>
+<div class="outline-text-3" id="text-orgc8e57cf">
+<ul class="org-ul">
+<li>Kap 7.1-3.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgff8546a" class="outline-3">
+<h3 id="orgff8546a">F12. Kap 7.</h3>
+<div class="outline-text-3" id="text-orgff8546a">
+<ul class="org-ul">
+<li>Kap 7, forts.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org8bd1e79" class="outline-3">
+<h3 id="org8bd1e79">F13. Kap 8.</h3>
+<div class="outline-text-3" id="text-org8bd1e79">
+<ul class="org-ul">
+<li>Kap 8.1.</li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgab5833e" class="outline-3">
+<h3 id="orgab5833e">F14. Kap 8.</h3>
+<div class="outline-text-3" id="text-orgab5833e">
+<ul class="org-ul">
+<li>Kap 8.2-3.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org5ada320" class="outline-3">
+<h3 id="org5ada320">F15. Kap 8-9.</h3>
+<div class="outline-text-3" id="text-org5ada320">
+<ul class="org-ul">
+<li>Kap 8.3,  9.1.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org86d1684" class="outline-3">
+<h3 id="org86d1684">F16.</h3>
+<div class="outline-text-3" id="text-org86d1684">
+<ul class="org-ul">
+<li>Kap 9.1</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9ff335c" class="outline-3">
+<h3 id="org9ff335c">F17.</h3>
+<div class="outline-text-3" id="text-org9ff335c">
+<ul class="org-ul">
+<li>Kap 9.1-2.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org8701c3d" class="outline-3">
+<h3 id="org8701c3d">F18.</h3>
+<div class="outline-text-3" id="text-org8701c3d">
+<ul class="org-ul">
+<li>Kap 9.2-3.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgcc88fa1" class="outline-3">
+<h3 id="orgcc88fa1">F19.</h3>
+<div class="outline-text-3" id="text-orgcc88fa1">
+<ul class="org-ul">
+<li>Kap 9.3.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd61e090" class="outline-3">
+<h3 id="orgd61e090">F20.</h3>
+<div class="outline-text-3" id="text-orgd61e090">
+<ul class="org-ul">
+<li>Sammanfattning/repetition, del 1.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcf8e1b2" class="outline-3">
+<h3 id="orgcf8e1b2">F21.</h3>
+<div class="outline-text-3" id="text-orgcf8e1b2">
+<ul class="org-ul">
+<li>Sammanfattning/repetition, del 2.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1a073ca" class="outline-3">
+<h3 id="org1a073ca">F22.</h3>
+<div class="outline-text-3" id="text-org1a073ca">
+<ul class="org-ul">
+<li>Laplaceinvers samt Riemanns
+zeta-funktion</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org5e8383b" class="outline-2">
+<h2 id="org5e8383b">Övningar</h2>
+<div class="outline-text-2" id="text-org5e8383b">
+</div>
+<div id="outline-container-org73c9b0a" class="outline-3">
+<h3 id="org73c9b0a">Ö1.</h3>
+<div class="outline-text-3" id="text-org73c9b0a">
+<ul class="org-ul">
+<li>Kap 1. Grundläggande rek uppgifter: 1, 2, 3, 4, 8, 9, 11, 22, 23abc,
+27abc, 33ab.  Avancerade: 23de, 25, 26, 27de, 29, 33de.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org4ebdb26" class="outline-3">
+<h3 id="org4ebdb26">Ö2</h3>
+<div class="outline-text-3" id="text-org4ebdb26">
+<ul class="org-ul">
+<li>Kap 2. Grundläggande rek uppgifter: 14 (några), 18 (några), 20, 21,
+25ac. Avancerade: Resten av 14, 18 och 25, 22, 23.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org1f1c7ca" class="outline-3">
+<h3 id="org1f1c7ca">Ö3</h3>
+<div class="outline-text-3" id="text-org1f1c7ca">
+<ul class="org-ul">
+<li>Kap 3. Grundläggande rek uppgifter:   9, 13a, 14ab, 17a, 32, 33a,
+40, 41, 45aeh. Avancerade: 5 9, 13, 14, 17, 18, 21, 33, 51.</li>
+
+<li>Inlämningsuppgifter, omgång 1: 
+<ul class="org-ul">
+<li>Kap 1: 26, 29, 31, 33e</li>
+<li>Kap 2: 22, 23</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge70116c" class="outline-3">
+<h3 id="orge70116c">Ö4</h3>
+<div class="outline-text-3" id="text-orge70116c">
+<ul class="org-ul">
+<li>Kap 4. Grundläggande rek uppgifter: 1ab, 4, 5ac, 6ab, 27, 28,
+29, 37. Avancerade: 5, 6, 14, 16, 30, 31</li>
+
+<li>Inlämningsuppgifter, omgång 2: 
+<ul class="org-ul">
+<li>Kap 2: 25d, 29.</li>
+<li>Kap 3: 5, 9, 18, 24, 43, 53.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4d6263a" class="outline-3">
+<h3 id="org4d6263a">Ö5</h3>
+<div class="outline-text-3" id="text-org4d6263a">
+<ul class="org-ul">
+<li>Kap 5. Grundläggande rek uppgifter: 1, 3bcde, 11,
+14, 18. Avancerade: 2, 3, 7, 11, 15, 16, 19, 20</li>
+
+<li>Inlämningsuppgifter, omgång 3: 
+<ul class="org-ul">
+<li>Kap 4: 2cd, 4, 12, 27, 29, 30, 31</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-orgadf3ec7" class="outline-3">
+<h3 id="orgadf3ec7">Ö6</h3>
+<div class="outline-text-3" id="text-orgadf3ec7">
+<ul class="org-ul">
+<li>Sats 6.8 samt tillämpningar. Fortsätting på uppgifter från kap 5.
+(Grundläggande: 1, 3bcde, 11, 14, 18. Avancerade: 2, 3, 7, 11, 15,
+16, 19, 20.).  I mån av tid: kap 6. Grundläggande rek uppgifter: 2,
+3, 4, 6, (8), 11.  Avancerade: 1, 5, 7, 9.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgac31c9b" class="outline-3">
+<h3 id="orgac31c9b">Ö7</h3>
+<div class="outline-text-3" id="text-orgac31c9b">
+<ul class="org-ul">
+<li>kap 6, fortsätting. Grundläggande rek uppgifter: 2, 3, 4, 6,
+(8), 11.  Avancerade: 1, 5, 7, 9.</li>
+<li>Inlämningsuppgifter, omgång 4: 
+<ul class="org-ul">
+<li>Kap 4: 32</li>
+<li>Kap 5: 1a, 14, 11, 15, 16, 19, 20</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+
+
+
+<div id="outline-container-org5f9fc3b" class="outline-3">
+<h3 id="org5f9fc3b">Ö8</h3>
+<div class="outline-text-3" id="text-org5f9fc3b">
+<ul class="org-ul">
+<li>Kap 7. Grundläggande rek uppgifter: 1ab, 2ab, 5, 12, 18, 25ab,
+26ab, 28a, 29a, 33abc, 34a. Avancerade: 21, 25c, 26 cd, 27, 28b,
+29bc, 30, 33defgh, 35.</li>
+
+<li>Inlämningsuppgifter, omgång 5: 
+<ul class="org-ul">
+<li>Kap 6: 1, 5, 6, 7, 8, 9, 11.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgc28ef99" class="outline-3">
+<h3 id="orgc28ef99">Ö9</h3>
+<div class="outline-text-3" id="text-orgc28ef99">
+<ul class="org-ul">
+<li>Kap 7, forts: uppgift 19, 23, 32 (även grundläggande: 1ab, 2ab, 5,
+12, 18, 25ab, 26ab, 28a, 29a, 33abc, 34a; avancerade: 21, 25c, 26
+cd, 27, 28b, 29bc, 30, 33defgh, 35). Kap 8. Grundläggande rek
+uppgifter: 1, 2, 5ab, 10ab. Avancerade: 9, 10cd.</li>
+
+<li>Valda uppgifter från (<a href="https://canvas.kth.se/courses/37946/pages/kursmal-betygskriterier-tentamen-mm">gamla tentor</a>).
+2022-06-07: 1, 2, 5, 7, 8.  2022-08-17: 1, 3, 7.</li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-orgc1254b2" class="outline-3">
+<h3 id="orgc1254b2">Ö10</h3>
+<div class="outline-text-3" id="text-orgc1254b2">
+<ul class="org-ul">
+<li>Kap 8. Grundläggande rek uppgifter: 1, 2, 5ab, 10ab, 17, 18, 23,
+27, 28a, 31. Avancerade: 9, 10cd, 19, 20, 28bc, 33. Teoretiska: 8.6,
+8.11, 8.35.</li>
+
+<li>Inlämningsuppgifter, omgång 6: 
+<ul class="org-ul">
+<li>Kap 7: 21, 26d, 28b, 30, 31, 35</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgee04af9" class="outline-3">
+<h3 id="orgee04af9">Ö11</h3>
+<div class="outline-text-3" id="text-orgee04af9">
+<ul class="org-ul">
+<li>Uppgifter från kap 8 som ni inte hunnit med (särskilt 8.35.)</li>
+
+<li>Valda uppgifter från <a href="https://people.kth.se/~kurlberg/sf1691/tentor/">gamla tentor</a>.
+240703: 1,2,4,5,7.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgce3b62e" class="outline-3">
+<h3 id="orgce3b62e">Ö12</h3>
+<div class="outline-text-3" id="text-orgce3b62e">
+<ul class="org-ul">
+<li>Kap 9. Grundläggande uppgifter : 1, 2, 5abcd, 7ace,
+8abcd, 15. Avancerade: 3, 4, 5ef, 6, 7bd, 8ef, 11, 13, 14</li>
+
+<li>Inlämningsuppgifter, omgång 7:
+<ul class="org-ul">
+<li>Kap 8: 2, 9, 10d, 11, 19, 33.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-org18d1782" class="outline-3">
+<h3 id="org18d1782">Ö13</h3>
+<div class="outline-text-3" id="text-org18d1782">
+<ul class="org-ul">
+<li>Kap 9. Grundläggande uppgifter : 7ace, 8abcd, 15. 
+Avancerade: 3, 4, 7bd, 8ef, 14</li>
+
+<li>Inlämningsuppgifter, omgång 8:
+<ul class="org-ul">
+<li>Kap 8: 14</li>
+<li>Kap 9: 8af, 3, 11, 14, 17, 18</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+
+<div id="outline-container-org023bf19" class="outline-3">
+<h3 id="org023bf19">Ö14</h3>
+<div class="outline-text-3" id="text-org023bf19">
+<ul class="org-ul">
+<li>Kap 9. Grundläggande uppgifter : 7ace, 8abcd.
+Avancerade: 3, 4, 7bd, 8ef, 14.
+Valda uppgifter bland <a href="old-problems.pdf">utmaningarna</a></li>
+</ul>
+
+
+<ul class="org-ul">
+<li>Inlämningsuppgifter, omgång 9:
+<ul class="org-ul">
+<li>Kap 9: 9, 13, 15, 22, 23.</li>
+<li><a href="old-problems.pdf">Utmaning</a> 91.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+
+
+
+
+
+
+<div id="outline-container-org4ffda63" class="outline-3">
+<h3 id="org4ffda63">Ö15</h3>
+<div class="outline-text-3" id="text-org4ffda63">
+<ul class="org-ul">
+<li>Valda uppgifter bland <a href="old-problems.pdf">utmaningarna</a> samt problem från gamla tentor,
+främst från <a href="https://canvas.kth.se/courses/37946/files/6640952?wrap=1">2306</a> och <a href="https://canvas.kth.se/courses/37946/files/6121803?wrap=1">2206</a>. Som förberedelse: räkna så bra du kan så
+att du kan ställa frågor på de problem du kört fast på.</li>
+
+<li>Obs: ingen inlämning.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org4f67734" class="outline-3">
+<h3 id="org4f67734">Ö16</h3>
+<div class="outline-text-3" id="text-org4f67734">
+<ul class="org-ul">
+<li>Allmän frågestund. Valda problem från <a href="https://people.kth.se/~kurlberg/sf1691/tentor/240819_SF1691_omtentamen_sol.pdf">2408</a>. Som förberedelse: räkna
+så bra du kan så att du kan ställa frågor på de problem du kört
+fast på.</li>
+
+<li>Inlämningsuppgifter, omgång 10:
+<ul class="org-ul">
+<li>Kap 10: 10.1.1-4, 10.3.1-4. <a href="old-problems.pdf">Utmaning</a> 51, 106, 108, 122, 196.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2026-01-11 Sun 11:11</p>
+</div>
+</body>
+</html>
