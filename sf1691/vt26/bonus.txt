@@ -1,4 +1,4 @@
-kod [hw1,hw2,hw3,hw4,hw5,hw6,hw7,hw8,hw9,hw10] bonus%
+kod [hw1,hw2,hw3,hw4,hw5,hw6,hw7,hw8,hw9,hw10] resultat%
 0a2bc87 [6, 0.0, 0, 0, 0, 0, 0, 0, 0, 0] 12.5
 dc281e4 [0, 0.0, 0, 0, 0, 0, 0, 0, 0, 0] 0.0
 233bc67 [0, 0.0, 0, 0, 0, 0, 0, 0, 0, 0] 0.0
