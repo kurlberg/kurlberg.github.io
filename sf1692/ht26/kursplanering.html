@@ -1,0 +1,534 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-08-23 Sun 23:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kursplanering SF1692, HT24</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">Kursplanering SF1692, HT24</h1>
+<p>
+Notera: schema med numrerade föreläsningar och övningar finns längst ner.
+</p>
+
+<div id="outline-container-org9783176" class="outline-2">
+<h2 id="org9783176">Föreläsningsplanering (preliminär)</h2>
+<div class="outline-text-2" id="text-org9783176">
+<ul class="org-ul">
+<li>Föreläsning 1: Kap. 1.1-1.2.</li>
+
+<li>Föreläsning 2: Kap. 1.3-1.5.</li>
+
+<li>Föreläsning 3: Kap. 2.{7,10,11}</li>
+
+<li>Föreläsning 4: Kap. 2.{8,9}, 3.14</li>
+
+<li>Föreläsning 5: Kap. 3.{15-17}.</li>
+
+<li>Föreläsning 6: Kap. 3.{18-19, 23}.</li>
+
+<li>Föreläsning 7: Kap. 14.{72-74, 77}.</li>
+
+<li>Föreläsning 8: Kap. 10.{54-56}</li>
+
+<li>Föreläsning 9: Kap. 57-60</li>
+
+<li>Föreläsning 10: Kap 61-62.</li>
+
+<li>Föreläsning 11: Kap. 62 (forts), 69-70.</li>
+
+<li>Föreläsning 12: Kap. 70, forts.</li>
+
+<li>Föreläsning 13: Kap. 70-71.</li>
+
+<li>Föreläsning 14: Kap. 71, Sauer (er tidigare nummebok): 6.4+6.6, Simmons: Kap 76, samt 48-50.</li>
+
+<li>Föreläsning 15: Kap. 50-51.</li>
+
+<li>Föreläsning 16: Kap. 51-53 (samt lösa system med Laplace).</li>
+</ul>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-org3ba58ca" class="outline-2">
+<h2 id="org3ba58ca">Övningar</h2>
+<div class="outline-text-2" id="text-org3ba58ca">
+<p>
+Notera: rekommenderade problem finns <a href="problems.html">här</a>.
+</p>
+
+<ul class="org-ul">
+<li>Övning 1: valda uppgifter från kap. 1.</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org928f213" class="outline-2">
+<h2 id="org928f213">v 35</h2>
+<div class="outline-text-2" id="text-org928f213">
+</div>
+<div id="outline-container-org6839abb" class="outline-3">
+<h3 id="org6839abb">Mån 2026-08-24</h3>
+<div class="outline-text-3" id="text-org6839abb">
+<ul class="org-ul">
+<li>15:00 - 17:00	Föreläsning 1</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgddac89c" class="outline-3">
+<h3 id="orgddac89c">Tis 2026-08-25</h3>
+<div class="outline-text-3" id="text-orgddac89c">
+<ul class="org-ul">
+<li>15:00 - 17:00	Föreläsning 2</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org973e6b4" class="outline-3">
+<h3 id="org973e6b4">Tors 2026-08-27</h3>
+<div class="outline-text-3" id="text-org973e6b4">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 3</li>
+<li>13:00 - 15:00	Övning 1</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org5820e47" class="outline-2">
+<h2 id="org5820e47">v 36</h2>
+<div class="outline-text-2" id="text-org5820e47">
+</div>
+<div id="outline-container-orgcf942dc" class="outline-3">
+<h3 id="orgcf942dc">Tis 2026-09-01</h3>
+<div class="outline-text-3" id="text-orgcf942dc">
+<ul class="org-ul">
+<li>15:00 - 17:00	Föreläsning 4</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org83a507f" class="outline-3">
+<h3 id="org83a507f">Ons 2026-09-02</h3>
+<div class="outline-text-3" id="text-org83a507f">
+<ul class="org-ul">
+<li>13:00 - 15:00	Övning 2</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9f67e08" class="outline-3">
+<h3 id="org9f67e08">Tors 2026-09-03</h3>
+<div class="outline-text-3" id="text-org9f67e08">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 5</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7ca219a" class="outline-3">
+<h3 id="org7ca219a">Fre 2026-09-04</h3>
+<div class="outline-text-3" id="text-org7ca219a">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 6</li>
+<li>13:00 - 15:00	Övning 3</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org552f363" class="outline-2">
+<h2 id="org552f363">v 37</h2>
+<div class="outline-text-2" id="text-org552f363">
+</div>
+<div id="outline-container-orgddd01c4" class="outline-3">
+<h3 id="orgddd01c4">Mån 2026-09-07</h3>
+<div class="outline-text-3" id="text-orgddd01c4">
+<ul class="org-ul">
+<li>15:00 - 17:00	Övning 4</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org810d81f" class="outline-3">
+<h3 id="org810d81f">Tis 2026-09-08</h3>
+<div class="outline-text-3" id="text-org810d81f">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 7</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org21fda39" class="outline-3">
+<h3 id="org21fda39">Ons 2026-09-09</h3>
+<div class="outline-text-3" id="text-org21fda39">
+<ul class="org-ul">
+<li>10:00 - 12:00	Övning 5</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb6ea44c" class="outline-3">
+<h3 id="orgb6ea44c">Tors 2026-09-10</h3>
+<div class="outline-text-3" id="text-orgb6ea44c">
+<ul class="org-ul">
+<li>10:00 - 12:00	Laboration</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org109b09b" class="outline-2">
+<h2 id="org109b09b">v 38</h2>
+<div class="outline-text-2" id="text-org109b09b">
+</div>
+<div id="outline-container-orga406006" class="outline-3">
+<h3 id="orga406006">Mån 2026-09-14</h3>
+<div class="outline-text-3" id="text-orga406006">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 8</li>
+<li>13:00 - 15:00	Övning 6</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org9f69d6b" class="outline-3">
+<h3 id="org9f69d6b">Tis 2026-09-15</h3>
+<div class="outline-text-3" id="text-org9f69d6b">
+<ul class="org-ul">
+<li>08:00 - 10:00	Föreläsning 9</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgee71b65" class="outline-3">
+<h3 id="orgee71b65">Tors 2026-09-17</h3>
+<div class="outline-text-3" id="text-orgee71b65">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 10</li>
+<li>13:00 - 15:00	Övning 7</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgcde169d" class="outline-2">
+<h2 id="orgcde169d">v 39</h2>
+<div class="outline-text-2" id="text-orgcde169d">
+</div>
+<div id="outline-container-orgafd3b71" class="outline-3">
+<h3 id="orgafd3b71">Tis 2026-09-22</h3>
+<div class="outline-text-3" id="text-orgafd3b71">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 11</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org64540c5" class="outline-3">
+<h3 id="org64540c5">Tors 2026-09-24</h3>
+<div class="outline-text-3" id="text-org64540c5">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 12</li>
+<li>13:00 - 15:00	Övning 8</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org5885778" class="outline-3">
+<h3 id="org5885778">Fre 2026-09-25</h3>
+<div class="outline-text-3" id="text-org5885778">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 13</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org98467ae" class="outline-2">
+<h2 id="org98467ae">v 40</h2>
+</div>
+<div id="outline-container-org018e555" class="outline-2">
+<h2 id="org018e555">Mån 2026-09-28</h2>
+<div class="outline-text-2" id="text-org018e555">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 14</li>
+</ul>
+</div>
+<div id="outline-container-org4b5cf8c" class="outline-3">
+<h3 id="org4b5cf8c">Ons 2026-09-30</h3>
+<div class="outline-text-3" id="text-org4b5cf8c">
+<ul class="org-ul">
+<li>10:00 - 12:00	Övning 9</li>
+<li>13:00 - 15:00	Övning 10</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcb3482b" class="outline-3">
+<h3 id="orgcb3482b">Tors 2026-10-01</h3>
+<div class="outline-text-3" id="text-orgcb3482b">
+<ul class="org-ul">
+<li>10:00 - 12:00	Föreläsning 15</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgedee5f2" class="outline-3">
+<h3 id="orgedee5f2">Fre 2026-10-02</h3>
+<div class="outline-text-3" id="text-orgedee5f2">
+<ul class="org-ul">
+<li>08:00 - 10:00	Övning 11</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfbb2f47" class="outline-2">
+<h2 id="orgfbb2f47">v 41</h2>
+<div class="outline-text-2" id="text-orgfbb2f47">
+</div>
+<div id="outline-container-org97e768e" class="outline-3">
+<h3 id="org97e768e">Mån 2026-10-05</h3>
+<div class="outline-text-3" id="text-org97e768e">
+<ul class="org-ul">
+<li>10:00 - 12:00	Laboration</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org39614b3" class="outline-3">
+<h3 id="org39614b3">Ons 2026-10-07</h3>
+<div class="outline-text-3" id="text-org39614b3">
+<ul class="org-ul">
+<li>13:00 - 15:00	Föreläsning 16</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3ae74cd" class="outline-3">
+<h3 id="org3ae74cd">Tors 2026-10-08</h3>
+<div class="outline-text-3" id="text-org3ae74cd">
+<ul class="org-ul">
+<li>15:00 - 17:00	Föreläsning 17</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org494c89e" class="outline-3">
+<h3 id="org494c89e">Fre 2026-10-09</h3>
+<div class="outline-text-3" id="text-org494c89e">
+<ul class="org-ul">
+<li>08:00 - 10:00	Övning 12</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orga89d420" class="outline-2">
+<h2 id="orga89d420">v 43</h2>
+<div class="outline-text-2" id="text-orga89d420">
+</div>
+<div id="outline-container-orgdbeae87" class="outline-3">
+<h3 id="orgdbeae87">Tors 2026-10-22</h3>
+<div class="outline-text-3" id="text-orgdbeae87">
+<ul class="org-ul">
+<li>08:00 - 12:00	Tentamen</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org4bd3b0a" class="outline-2">
+<h2 id="org4bd3b0a">v 51</h2>
+<div class="outline-text-2" id="text-org4bd3b0a">
+</div>
+<div id="outline-container-org0d15cc0" class="outline-3">
+<h3 id="org0d15cc0">Mån 2026-12-14</h3>
+<div class="outline-text-3" id="text-org0d15cc0">
+<ul class="org-ul">
+<li>08:00 - 12:00	Omtenta</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2026-08-23 Sun 23:53</p>
+</div>
+</body>
+</html>
