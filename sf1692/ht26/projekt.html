@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2026-09-08 Tue 23:04 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SF1692, numeriskt projekt</title>
+<meta name="author" content="Pär Kurlberg" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '%MULTLINEWIDTH'
+      },
+      tags: '%TAGS',
+      tagSide: '%TAGSIDE',
+      tagIndent: '%TAGINDENT'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '2em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '2em'
+    },
+    output: {
+      font: '%FONT',
+      displayOverflow: '%OVERFLOW'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">SF1692, numeriskt projekt</h1>
+<div id="table-of-contents" role="doc-toc">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents" role="doc-toc">
+<ul>
+<li><a href="#org1a50be3">1. Språk: python</a></li>
+<li><a href="#orgdd0a775">2. "Slumptalet" \(N\)</a></li>
+<li><a href="#org67f2feb">3. Existens men inte entydighet</a></li>
+<li><a href="#orgcf3bd49">4. PANG!</a></li>
+<li><a href="#orgbbcd7fc">5. Inte PANG</a></li>
+<li><a href="#orgf78a133">6. Vad är \(\pi\)?</a></li>
+<li><a href="#org9c945ed">7. Newton!</a></li>
+<li><a href="#orgb5cac22">8. Newton revisited (something for nothing)</a></li>
+</ul>
+</div>
+</div>
+<p>
+I rapporten bör varje student klippa in sina plottar/tabeller.
+</p>
+
+<div id="outline-container-org1a50be3" class="outline-2">
+<h2 id="org1a50be3"><span class="section-number-2">1.</span> Språk: python</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+All numerisk kod skall skrivas i python.  
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgdd0a775" class="outline-2">
+<h2 id="orgdd0a775"><span class="section-number-2">2.</span> "Slumptalet" \(N\)</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Låt \(N\) vara de två sista siffrorna i ditt personnummer.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org67f2feb" class="outline-2">
+<h2 id="org67f2feb"><span class="section-number-2">3.</span> Existens men inte entydighet</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Betrakta BVP
+\[
+y' = \sqrt{ |y| }, \quad y(0) = 0
+\]
+</p>
+
+<ul class="org-ul">
+<li>Värm upp med att lösa det analytiskt.</li>
+
+<li>Lös problemet numeriskt. Kommentarer?</li>
+
+<li>Hur länge kan du numeriskt få en lösning att "fastna" på \(y=0\)
+givet att \(y(-1) = -1\)?  (Dvs, låt \(y(-1) = -1 + \epsilon\) med
+\(\epsilon\) "pyttelitet", och vi säger att \(y\) "fastnar" så länge som
+\(|y| <= 10^{-6}\).)</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orgcf3bd49" class="outline-2">
+<h2 id="orgcf3bd49"><span class="section-number-2">4.</span> PANG!</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Betrakta BVP
+\[
+y' = y^2, \quad y(0) = N/100
+\]
+</p>
+
+<ul class="org-ul">
+<li>Lös problemet analytiskt. När smäller det?</li>
+
+<li>Prova att lösa problemet numeriskt.  Kan du "numeriskt visa" att
+det smäller?  Kan du uppskatta tiden till singuläriteten?</li>
+
+<li>Övertyga dig om (visa!?) att om \(y(0) < 0\) så måste \(y(t)<0\) för
+alla \(t>0\). (Ledtråd: Picard.)</li>
+
+<li>Kan du hitta numeriska exempel då \(y(0) = \epsilon < 0\), men
+\(y(t)>0\) för något \(t>0\)?  (Ev. måste du ändra ekvationen lite och
+ta \(y' = C y^2\) för "stort" \(C>0\).)  Om du
+skulle skriva en "automatlösare", hur skall denna kunna
+undvika/detektera djupt felaktiga lösningar av denna typ?</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbbcd7fc" class="outline-2">
+<h2 id="orgbbcd7fc"><span class="section-number-2">5.</span> Inte PANG</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Betrakta BVP
+\[
+y' = y, \quad y(0) = N
+\]
+</p>
+
+<p>
+Lös problemet numeriskt och finn \(y(2^k)\) med två korrekta decimaler,
+för \(k = 1, 2, 3, \ldots\) (tortera din dator tills den ger upp!)
+</p>
+
+<p>
+Jämför det teoretiska felet med felen din räkning ger.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgf78a133" class="outline-2">
+<h2 id="orgf78a133"><span class="section-number-2">6.</span> Vad är \(\pi\)?</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Läs början av kapitel 4.24.  Betrakta BVP
+\[
+y'' + y = 0, \quad y(0) = 1, \quad y'(0) = 0
+\]
+</p>
+
+<ul class="org-ul">
+<li>Lös analytiskt.</li>
+
+<li>Definiera \(\pi/2\) som första värdet på \(t>0\) så att \(y(t) = 0\).
+Skatta \(\pi\) genom att lösa BVP numeriskt (och skatta första
+nollstället).  Uppvärmning: hur många korrekta siffror kan du få
+innan din dator smälter?  (Prova Euler samt bättre saker.)  Efter
+uppvärmning: finn 20 korrekta decimaler. Ledtråd: du kan be om ledtråd.</li>
+
+<li>Om vi istället väljer att skatta \(\pi\) genom att hitta roten som
+ligger närmast \(10^3\), hur mycket svårare blir problemet?
+Jämför det teoretiska felet med felen din räkning ger.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9c945ed" class="outline-2">
+<h2 id="org9c945ed"><span class="section-number-2">7.</span> Newton!</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Läs kapitel 3.21.  Sätt solen i origo (antag att solen inte rör sig.)
+Tag en planet \(P\) som rör sig i \((x,y)\) -planet, och låt 
+\((x(t),y(t))\) vara planetens position vid tid \(t\).  
+</p>
+
+<ul class="org-ul">
+<li>Härled ett andra ordningens system av diffekvationer som beskriver
+planetens rörelse (byt <b>inte</b> till polära koordinater.)  Du kan
+välja massor så att ekvationerna blir så enkla som möjligt.  Om du
+behöver mer ledtrådar, googla "three body problem".</li>
+</ul>
+
+<ul class="org-ul">
+<li>Simulera systemet en kort tid genom att lösa numeriskt för lite
+olika val av initialvärden. (Plotta!)</li>
+
+<li><p>
+Simulera systemet en lång tid genom att lösa numeriskt för lite
+olika val av initialvärden.  Kan du upptäcka något konstigt?  (Du
+kan be om ledtråd.)
+</p>
+
+<p>
+Ledtråd: i vårt universum samt i den här kursen bevaras energin.
+</p></li>
+
+<li><p>
+Kan du hitta sätt att återställa ordningen i vår simulering?  Du
+kan be om ledtråd.
+</p>
+
+<p>
+Ledtråd: sök på semi-implicit Euler (eller symplectic Euler.)
+</p></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb5cac22" class="outline-2">
+<h2 id="orgb5cac22"><span class="section-number-2">8.</span> Newton revisited (something for nothing)</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Tag planetsystem med sol, Jupiter (dvs tung planet) samt jorden
+(punktformad).  Givet ett rymdskepp nära jorden med "delta-v" som är
+så litet att skeppet ej kan lämna solsystemet (ledtråd: "escape
+velocity") designa en bana nära Jupiter som funkar som en
+"gravitational slingshot" så att skeppet kan lämna solsystemet.
+</p>
+
+<ul class="org-ul">
+<li>Utforska numeriskt och hitta massor, planetbanor etc så att
+ovanstående funkar. Ledtrådar: använda astronomiska enheter
+(jorden ligger då ca 1 AU från solen.)  Om problem att pricka
+Jupiter: använd program för att söka fram initivalvillkor. Du kan
+be om ledtrådar.</li>
+
+<li>Hur vet du säkert att skeppet verkligen lämnar solsystemet?</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Pär Kurlberg</p>
+<p class="date">Created: 2026-09-08 Tue 23:04</p>
+</div>
+</body>
+</html>
